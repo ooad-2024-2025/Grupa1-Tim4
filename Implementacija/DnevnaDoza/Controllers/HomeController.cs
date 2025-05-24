@@ -2,7 +2,7 @@ using System.Diagnostics;
 using DnevnaDoza.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DnevnaDoza.Controllers
+namespace DnevnaDoza.Controllers // komentar 2
 {
     public class HomeController : Controller
     {

@@ -9,4 +9,4 @@
         String eMail {  get; set; }
         String radnoVrijeme {  get; set; }
     }
-}
+} // komenatr 1 
