@@ -1,13 +1,27 @@
-﻿namespace DnevnaDoza.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace DnevnaDoza.Models
 {
+
     public class ERacun
     {
-        int IDRacuna {  get; set; }
-        int IDNarudzbe {  get; set; }
-        String nazivZaposlenika {  get; set; }
-        bool ponistenRacun {  get; set; }
-        float iznostNarudzbe { get; set; }
-        DateOnly datum {  get; set; }
-        
+        [Key]
+        public int IDRacuna { get; set; } // Primary key
+
+        [ForeignKey("Narudzba")]
+        public int IDNarudzbe { get; set; } // Foreign key
+
+        public string NazivZaposlenika { get; set; }
+
+        public bool PonistenRacun { get; set; }
+
+        public float IznosNarudzbe { get; set; }
+
+        public DateOnly Datum { get; set; }
+
+        // Navigacijska veza ka Narudzba entitetu
+       // public NarudzbaProizvoda NarudzbaProizvoda { get; set; }
     }
+
 }

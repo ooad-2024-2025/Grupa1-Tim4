@@ -1,16 +1,30 @@
-﻿namespace DnevnaDoza.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace DnevnaDoza.Models
 {
     public class NarudzbaProizvoda
     {
-        public int IDNarudzbe {  get; set; }
-        public int brojProizvoda {  get; set; }
-        public double ukupnaCijena {  get; set; }
-        bool jeObradjenaNarudzba {  get; set; }
-        public DateTime datumNarudzbe { get; set; } 
-        public int IDKorisnika {  get; set; }
+
+        [Key]
+        public int IDNarudzbe { get; set; }
+
+        public int BrojProizvoda { get; set; }
+
+        public double UkupnaCijena { get; set; }
+
+        public bool JeObradjenaNarudzba { get; set; }
+
+        public DateTime DatumNarudzbe { get; set; }
+
+        [ForeignKey("Korisnik")]
+        public int IDKorisnika { get; set; }
+
+        [ForeignKey("ObradaNarudzbe")]
         public int IDObradaNarudzbe { get; set; }
 
-
-
+        // Navigacijska svojstva
+      //  public Korisnik Korisnik { get; set; }
+       // public ObradaNarudzbe ObradaNarudzbe { get; set; }
     }
 }

@@ -1,25 +1,33 @@
-﻿namespace DnevnaDoza.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace DnevnaDoza.Models
 {
     public class Korisnik
     {
-        int IDKorisnik { get; set; }
-        String ime { get; set; }
-        String prezime { get; set; }
-        String korisnickoIme { get; set; }
-        TipKorisnika tipKorisnika { get; set; }
-        DateOnly datumZaposlenja { get; set; }
-        String lozinka {  get; set; }
-        String CVC { get; set; }
-        DateOnly datumIstekaKartice { get; set; }
-        String brojKartice { get; set; }
-        String brojTelefona { get; set; }
-        String mjestoStanovanja { get; set; }
-        String postanskiBroj { get; set; }
-        String adresa { get; set; }
+        [Key]
+        public int IDKorisnik { get; set; }
 
-        String eMail { get; set; }
+        public string Ime { get; set; }
+        public string Prezime { get; set; }
+        public string KorisnickoIme { get; set; }
+        public TipKorisnika TipKorisnika { get; set; }
+        public DateOnly DatumZaposlenja { get; set; }
+        public string Lozinka { get; set; }
+        public string CVC { get; set; }
+        public DateOnly DatumIstekaKartice { get; set; }
+        public string BrojKartice { get; set; }
+        public string BrojTelefona { get; set; }
+        public string MjestoStanovanja { get; set; }
+        public string PostanskiBroj { get; set; }
+        public string Adresa { get; set; }
+        public string EMail { get; set; }
 
-        int IDApoteke { get; set; }
+        [ForeignKey("Apoteka")]
+        public int IDApoteke { get; set; }
+
+        // Navigacijsko svojstvo
+        //public Apoteka Apoteka { get; set; }
 
 
 

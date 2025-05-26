@@ -1,12 +1,20 @@
-﻿namespace DnevnaDoza.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace DnevnaDoza.Models
 {
     public class Apoteka
     {
-        int ID {  get; set; }
-        String naziv {  get; set; }
-        String adresa {  get; set; }
-        String telefon {  get; set; }
-        String eMail {  get; set; }
-        String radnoVrijeme {  get; set; }
+        [Key]
+        public int Id { get; set; }
+
+        public string Naziv { get; set; }
+
+        public string Adresa { get; set; }
+
+        public string Telefon { get; set; }
+
+        public string EMail { get; set; }
+
+        public string RadnoVrijeme { get; set; }
     }
 } // komenatr 1 
