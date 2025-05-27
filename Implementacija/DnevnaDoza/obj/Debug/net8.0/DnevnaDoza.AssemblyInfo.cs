@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DnevnaDoza")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef41fbe2e2872de04371e627be8d6e51c17e60e2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ba7f6c350a865738b7642715299ce6a9d7468b3")]
 [assembly: System.Reflection.AssemblyProductAttribute("DnevnaDoza")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DnevnaDoza")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
