@@ -10,22 +10,35 @@ using DnevnaDoza.Models;
 
 namespace DnevnaDoza.Controllers
 {
-    public class ApotekasController : Controller
+    public class KorpaController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public ApotekasController(ApplicationDbContext context)
+        public KorpaController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Apotekas
-        public async Task<IActionResult> Index()
+        // GET: Korpas
+         public async Task<IActionResult> Index()
+         {
+             return View(await _context.Korpa.ToListAsync());
+         }
+       /* public async Task<IActionResult> Index()
         {
-            return View(await _context.Apoteka.ToListAsync());
-        }
+            try
+            {
+                var proizvodi = await _context.Korpa.ToListAsync();
+                return View(proizvodi);
+            }
+            catch (Exception ex)
+            {
+                return Content("Greška prilikom učitavanja podataka iz korpe: " + ex.Message);
+            }
+        }*/
 
-        // GET: Apotekas/Details/5
+
+        // GET: Korpas/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,39 +46,39 @@ namespace DnevnaDoza.Controllers
                 return NotFound();
             }
 
-            var apoteka = await _context.Apoteka
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (apoteka == null)
+            var korpa = await _context.Korpa
+                .FirstOrDefaultAsync(m => m.ID == id);
+            if (korpa == null)
             {
                 return NotFound();
             }
 
-            return View(apoteka);
+            return View(korpa);
         }
 
-        // GET: Apotekas/Create
+        // GET: Korpas/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Apotekas/Create
+        // POST: Korpas/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Naziv,Adresa,Telefon,EMail,RadnoVrijeme")] Apoteka apoteka)
+        public async Task<IActionResult> Create([Bind("ID,StanjeKorpe,BrojProizvoda,PotvrdjenaNarudzba,UkupanIznos,IDKorisnik,IDNarudzbe")] Korpa korpa)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(apoteka);
+                _context.Add(korpa);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(apoteka);
+            return View(korpa);
         }
 
-        // GET: Apotekas/Edit/5
+        // GET: Korpas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,22 +86,22 @@ namespace DnevnaDoza.Controllers
                 return NotFound();
             }
 
-            var apoteka = await _context.Apoteka.FindAsync(id);
-            if (apoteka == null)
+            var korpa = await _context.Korpa.FindAsync(id);
+            if (korpa == null)
             {
                 return NotFound();
             }
-            return View(apoteka);
+            return View(korpa);
         }
 
-        // POST: Apotekas/Edit/5
+        // POST: Korpas/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Naziv,Adresa,Telefon,EMail,RadnoVrijeme")] Apoteka apoteka)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,StanjeKorpe,BrojProizvoda,PotvrdjenaNarudzba,UkupanIznos,IDKorisnik,IDNarudzbe")] Korpa korpa)
         {
-            if (id != apoteka.Id)
+            if (id != korpa.ID)
             {
                 return NotFound();
             }
@@ -97,12 +110,12 @@ namespace DnevnaDoza.Controllers
             {
                 try
                 {
-                    _context.Update(apoteka);
+                    _context.Update(korpa);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ApotekaExists(apoteka.Id))
+                    if (!KorpaExists(korpa.ID))
                     {
                         return NotFound();
                     }
@@ -113,10 +126,10 @@ namespace DnevnaDoza.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(apoteka);
+            return View(korpa);
         }
 
-        // GET: Apotekas/Delete/5
+        // GET: Korpas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,34 +137,34 @@ namespace DnevnaDoza.Controllers
                 return NotFound();
             }
 
-            var apoteka = await _context.Apoteka
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (apoteka == null)
+            var korpa = await _context.Korpa
+                .FirstOrDefaultAsync(m => m.ID == id);
+            if (korpa == null)
             {
                 return NotFound();
             }
 
-            return View(apoteka);
+            return View(korpa);
         }
 
-        // POST: Apotekas/Delete/5
+        // POST: Korpas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var apoteka = await _context.Apoteka.FindAsync(id);
-            if (apoteka != null)
+            var korpa = await _context.Korpa.FindAsync(id);
+            if (korpa != null)
             {
-                _context.Apoteka.Remove(apoteka);
+                _context.Korpa.Remove(korpa);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ApotekaExists(int id)
+        private bool KorpaExists(int id)
         {
-            return _context.Apoteka.Any(e => e.Id == id);
+            return _context.Korpa.Any(e => e.ID == id);
         }
     }
 }

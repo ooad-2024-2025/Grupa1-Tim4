@@ -32,24 +32,24 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/Apotekas/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBvdGVrYXNcQ3JlYXRlLmNzaHRtbA==
+[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/Apoteka/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBvdGVrYVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/Apotekas/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBvdGVrYXNcRGVsZXRlLmNzaHRtbA==
+[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/Apoteka/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBvdGVrYVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/Apotekas/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBvdGVrYXNcRGV0YWlscy5jc2h0bWw=
+[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/Apoteka/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBvdGVrYVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/Apotekas/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBvdGVrYXNcRWRpdC5jc2h0bWw=
+[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/Apoteka/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBvdGVrYVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/Apotekas/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBvdGVrYXNcSW5kZXguY3NodG1s
+[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/Apoteka/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBvdGVrYVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/Home/Index.cshtml]
@@ -58,6 +58,46 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/Korpa/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29ycGFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/Korpa/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29ycGFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/Korpa/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29ycGFcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/Korpa/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29ycGFcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/Korpa/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29ycGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/NarudzbaProizvoda/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmFydWR6YmFQcm9penZvZGFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/NarudzbaProizvoda/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmFydWR6YmFQcm9penZvZGFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/NarudzbaProizvoda/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmFydWR6YmFQcm9penZvZGFcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/NarudzbaProizvoda/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmFydWR6YmFQcm9penZvZGFcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/NarudzbaProizvoda/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmFydWR6YmFQcm9penZvZGFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Administrator/Desktop/ProjektOOAD/Implementacija/DnevnaDoza/Views/Proizvod/Create.cshtml]
