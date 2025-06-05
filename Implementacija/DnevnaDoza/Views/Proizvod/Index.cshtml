@@ -1,4 +1,7 @@
 ﻿@model IEnumerable<DnevnaDoza.Models.Proizvod>
+<!--model element, kojim se definiše varijabla model. Ovoj varijabli dodjeljuje se
+vrijednost IEnumerable<StudentskaSluzba.Models.Predmet>, čime se označava da
+je u pitanju kolekcija podataka tipa Predmet. -->
 
 @{
     ViewData["Title"] = "Proizvod";
@@ -33,6 +36,10 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+                <!--Html.DisplayFor(modelItem => item.Naziv), čime se vrši prikaz vrijednosti
+                atributa za željenu varijablu. U konkretnom slučaju, vrši se prikaz vrijednosti atributa
+                Naziv za trenutni element klase Predmet u foreach petlji.
+                -->
             <td>
                 @Html.DisplayFor(modelItem => item.Naziv)
             </td>
@@ -44,6 +51,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IDKorpa)
+                    <!--item.ID, čime se dobavlja vrijednost ID atributa za trenutni element klase Predmet u
+                    foreach petlji. Ova vrijednost koristi se za rutiranje, što omogućava da se klikom na
+                    link Edit pošalje zahtjev na adresu Predmets/Edit/<ID predmeta>.-->
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Kategorija)

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Yl+c/v9odvzV+2y5HNYRo8yVEv6AiNrQXdE3C9fkliM=",
+  "Hash": "r9qZDBpLZhYEiinlvX7EfLLQhAkG/fRs8RlGVMdT1Gc=",
   "Source": "DnevnaDoza",
   "BasePath": "_content/DnevnaDoza",
   "Mode": "Default",
@@ -1396,32 +1396,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ozu22stjof",
-      "Integrity": "ZMvmWDSU4zY1Z29EQGm5Mubfz/YxF4hiReGqx84o4tA=",
+      "Fingerprint": "at9fsyf7wo",
+      "Integrity": "bvMHiIP0EkphZRBd9XnUi8rmWiCKdYpI7EbzmK1Ciec=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
-    },
-    {
-      "Identity": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "SourceId": "DnevnaDoza",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\",
-      "BasePath": "_content/DnevnaDoza",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.css#[.{fingerprint}]?.map",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "73kdqttayv",
-      "Integrity": "DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
@@ -1438,32 +1417,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6gzpyzhau4",
-      "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
+      "Fingerprint": "wj0xf2bef7",
+      "Integrity": "9Jd6TqaOdSHdhTaCGUmFl8c4aUeKalHi40wqPf0xH94=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
-    },
-    {
-      "Identity": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "SourceId": "DnevnaDoza",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\",
-      "BasePath": "_content/DnevnaDoza",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css#[.{fingerprint}]?.map",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "8inm30yfxf",
-      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
@@ -2685,7 +2643,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 15 Apr 2025 08:10:28 GMT"
+          "Value": "Thu, 05 Jun 2025 16:17:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2730,7 +2688,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 15 Apr 2025 08:10:28 GMT"
+          "Value": "Thu, 05 Jun 2025 16:17:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2775,7 +2733,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 15 Apr 2025 08:10:28 GMT"
+          "Value": "Thu, 05 Jun 2025 16:17:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2812,7 +2770,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 15 Apr 2025 08:10:28 GMT"
+          "Value": "Thu, 05 Jun 2025 16:17:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5211,6 +5169,51 @@
       ]
     },
     {
+      "Route": "lib/bootstrap/dist/css/bootstrap.at9fsyf7wo.css",
+      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "283024"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bvMHiIP0EkphZRBd9XnUi8rmWiCKdYpI7EbzmK1Ciec=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 15:58:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "at9fsyf7wo"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bvMHiIP0EkphZRBd9XnUi8rmWiCKdYpI7EbzmK1Ciec="
+        }
+      ]
+    },
+    {
       "Route": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
@@ -5221,7 +5224,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "215356"
+          "Value": "283024"
         },
         {
           "Name": "Content-Type",
@@ -5229,11 +5232,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ZMvmWDSU4zY1Z29EQGm5Mubfz/YxF4hiReGqx84o4tA=\""
+          "Value": "\"bvMHiIP0EkphZRBd9XnUi8rmWiCKdYpI7EbzmK1Ciec=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 15 Apr 2025 08:10:28 GMT"
+          "Value": "Thu, 05 Jun 2025 15:58:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5243,134 +5246,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ZMvmWDSU4zY1Z29EQGm5Mubfz/YxF4hiReGqx84o4tA="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.css.73kdqttayv.map",
-      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "536547"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 15 Apr 2025 08:10:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "73kdqttayv"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.css.map"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.css.map",
-      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "536547"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 15 Apr 2025 08:10:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "162726"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 15 Apr 2025 08:10:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "6gzpyzhau4"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+          "Value": "sha256-bvMHiIP0EkphZRBd9XnUi8rmWiCKdYpI7EbzmK1Ciec="
         }
       ]
     },
@@ -5385,7 +5261,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162726"
+          "Value": "234498"
         },
         {
           "Name": "Content-Type",
@@ -5393,11 +5269,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+          "Value": "\"9Jd6TqaOdSHdhTaCGUmFl8c4aUeKalHi40wqPf0xH94=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 15 Apr 2025 08:10:28 GMT"
+          "Value": "Thu, 05 Jun 2025 16:00:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5407,13 +5283,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+          "Value": "sha256-9Jd6TqaOdSHdhTaCGUmFl8c4aUeKalHi40wqPf0xH94="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Route": "lib/bootstrap/dist/css/bootstrap.min.wj0xf2bef7.css",
+      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5422,89 +5298,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "449111"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 15 Apr 2025 08:10:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "8inm30yfxf"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.min.css.map"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.min.css.map",
-      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "449111"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 15 Apr 2025 08:10:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.ozu22stjof.css",
-      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "215356"
+          "Value": "234498"
         },
         {
           "Name": "Content-Type",
@@ -5512,11 +5306,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ZMvmWDSU4zY1Z29EQGm5Mubfz/YxF4hiReGqx84o4tA=\""
+          "Value": "\"9Jd6TqaOdSHdhTaCGUmFl8c4aUeKalHi40wqPf0xH94=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 15 Apr 2025 08:10:28 GMT"
+          "Value": "Thu, 05 Jun 2025 16:00:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5526,15 +5320,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ozu22stjof"
+          "Value": "wj0xf2bef7"
         },
         {
           "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.css"
+          "Value": "lib/bootstrap/dist/css/bootstrap.min.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ZMvmWDSU4zY1Z29EQGm5Mubfz/YxF4hiReGqx84o4tA="
+          "Value": "sha256-9Jd6TqaOdSHdhTaCGUmFl8c4aUeKalHi40wqPf0xH94="
         }
       ]
     },
