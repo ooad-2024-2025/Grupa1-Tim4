@@ -1,2 +1,0 @@
-C:\Users\Administrator\Desktop\ProjektOOAD\Implementacija\DnevnaDoza\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
-C:\Users\Administrator\Desktop\ProjektOOAD\Implementacija\DnevnaDoza\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
