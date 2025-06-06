@@ -24,7 +24,8 @@ namespace DnevnaDoza.Models
         public int IDObradaNarudzbe { get; set; }
 
         // Navigacijska svojstva
-      //  public Korisnik Korisnik { get; set; }
-       // public ObradaNarudzbe ObradaNarudzbe { get; set; }
+        public Korisnik Korisnik { get; set; }  // Veza sa korisnikom
+        public ObradaNarudzbe ObradaNarudzbe { get; set; } // Veza sa obradom narudžbe
+
     }
 }
