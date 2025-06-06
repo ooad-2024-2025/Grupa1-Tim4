@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "r9qZDBpLZhYEiinlvX7EfLLQhAkG/fRs8RlGVMdT1Gc=",
+  "Hash": "GhLmiqU8AThUjzgRX7Eoib9srH2gERZomdsvWfBbvJQ=",
   "Source": "DnevnaDoza",
   "BasePath": "_content/DnevnaDoza",
   "Mode": "Default",
@@ -1359,6 +1359,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Alora.png",
+      "SourceId": "DnevnaDoza",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\",
+      "BasePath": "_content/DnevnaDoza",
+      "RelativePath": "images/Alora#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "f44v87u0k2",
+      "Integrity": "YXWCPr22DK76xH6zwXqzFDLyNu3QH7ZLp28EmqMsZ2g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Alora.png"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\js\\site.js",
@@ -5083,6 +5104,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s="
+        }
+      ]
+    },
+    {
+      "Route": "images/Alora.f44v87u0k2.png",
+      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Alora.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124694"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YXWCPr22DK76xH6zwXqzFDLyNu3QH7ZLp28EmqMsZ2g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 17:39:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f44v87u0k2"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Alora.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YXWCPr22DK76xH6zwXqzFDLyNu3QH7ZLp28EmqMsZ2g="
+        }
+      ]
+    },
+    {
+      "Route": "images/Alora.png",
+      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Alora.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124694"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YXWCPr22DK76xH6zwXqzFDLyNu3QH7ZLp28EmqMsZ2g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 17:39:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YXWCPr22DK76xH6zwXqzFDLyNu3QH7ZLp28EmqMsZ2g="
         }
       ]
     },
