@@ -13,6 +13,9 @@ namespace DnevnaDoza.Models
         public string KorisnickoIme { get; set; }
         public TipKorisnika TipKorisnika { get; set; }
         public DateOnly DatumZaposlenja { get; set; }
+
+        [Required]
+        [MinLength(8, ErrorMessage = "Lozinka mora imati najmanje 8 karaktera.")]
         public string Lozinka { get; set; }
         public string CVC { get; set; }
         public DateOnly DatumIstekaKartice { get; set; }
@@ -21,6 +24,9 @@ namespace DnevnaDoza.Models
         public string MjestoStanovanja { get; set; }
         public string PostanskiBroj { get; set; }
         public string Adresa { get; set; }
+
+        [Required]
+        [EmailAddress]
         public string EMail { get; set; }
 
         [ForeignKey("Apoteka")]

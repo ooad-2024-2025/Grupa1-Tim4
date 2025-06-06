@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DnevnaDoza.Data;
 using DnevnaDoza.Models;
+using DnevnaDoza.Services;
 
 namespace DnevnaDoza.Controllers
 {
@@ -14,9 +15,12 @@ namespace DnevnaDoza.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        public NarudzbaProizvodaController(ApplicationDbContext context)
+        private readonly EmailServis _emailService;
+
+        public NarudzbaProizvodaController(ApplicationDbContext context, EmailServis emailServis)
         {
             _context = context;
+            _emailService = emailServis;
         }
 
         // GET: NarudzbaProizvodas
@@ -24,7 +28,7 @@ namespace DnevnaDoza.Controllers
         {
             return View(await _context.NarudzbaProizvoda.ToListAsync());
         }*/
-        
+
         public async Task<IActionResult> Index()
         {
             try
@@ -161,6 +165,36 @@ namespace DnevnaDoza.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
+
+
+        [HttpPost]
+        public async Task<IActionResult> CompleteOrder(int orderId)
+        {
+            // Preuzmite podatke o porudžbini iz baze
+            var order = await _context.NarudzbaProizvoda
+                .Include(o => o.Korisnik) // Pretpostavlja se da je veza između korisnika i narudžbe definisana
+                .FirstOrDefaultAsync(o => o.IDNarudzbe == orderId);
+
+            if (order == null)
+            {
+                return NotFound("Porudžbina nije pronađena.");
+            }
+
+            // Generišite sadržaj računa
+            string subject = "Vaš račun za kupovinu";
+            string body = $"Poštovani {order.Korisnik.Ime},<br/><br/>" +
+                          $"Hvala Vam na kupovini!<br/>" +
+                          $"Ukupan iznos: {order.UkupnaCijena:C}.<br/>" +
+                          $"Račun je priložen u ovom e-mailu.";
+
+            // Pošaljite e-mail korisniku
+            await _emailService.SendEmailAsync(order.Korisnik.EMail, subject, body);
+
+            TempData["Message"] = "Kupovina završena! Račun je poslat na e-mail.";
+            return RedirectToAction("Index");
+        }
+
 
         private bool NarudzbaProizvodaExists(int id)
         {
