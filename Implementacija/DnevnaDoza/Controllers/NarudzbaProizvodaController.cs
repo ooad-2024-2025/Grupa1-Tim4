@@ -23,11 +23,6 @@ namespace DnevnaDoza.Controllers
             _emailService = emailServis;
         }
 
-        public NarudzbaProizvodaController(EmailServis emailService)
-        {
-            _emailService = emailService;
-        }
-
         // GET: NarudzbaProizvodas
         /*public async Task<IActionResult> Index()
         {
