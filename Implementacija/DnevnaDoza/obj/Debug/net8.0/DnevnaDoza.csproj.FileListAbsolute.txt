@@ -979,3 +979,9 @@ C:\Users\User\Source\Repos\Grupa1-Tim4\Implementacija\DnevnaDoza\bin\Debug\net8.
 C:\Users\User\Source\Repos\Grupa1-Tim4\Implementacija\DnevnaDoza\bin\Debug\net8.0\MimeKit.dll
 C:\Users\User\Source\Repos\Grupa1-Tim4\Implementacija\DnevnaDoza\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\User\Source\Repos\Grupa1-Tim4\Implementacija\DnevnaDoza\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Administrator\Desktop\ProjektOOAD\Implementacija\DnevnaDoza\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\Administrator\Desktop\ProjektOOAD\Implementacija\DnevnaDoza\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\Administrator\Desktop\ProjektOOAD\Implementacija\DnevnaDoza\bin\Debug\net8.0\MailKit.dll
+C:\Users\Administrator\Desktop\ProjektOOAD\Implementacija\DnevnaDoza\bin\Debug\net8.0\MimeKit.dll
+C:\Users\Administrator\Desktop\ProjektOOAD\Implementacija\DnevnaDoza\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Administrator\Desktop\ProjektOOAD\Implementacija\DnevnaDoza\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

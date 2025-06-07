@@ -77,7 +77,7 @@ namespace DnevnaDoza.Controllers
                 string body = $"Poštovani {korisnik.Ime},<br/><br/>Hvala što ste se registrovali na našu platformu!";
                 await _emailServis.SendEmailAsync(korisnik.EMail, subject, body);
 
-                TempData["Message"] = "Registracija uspešna! Proverite svoj e-mail.";
+                TempData["Message"] = "Registracija uspješna! Provjerite svoj e-mail.";
                 return RedirectToAction(nameof(Index));
             }
 
