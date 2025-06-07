@@ -212,6 +212,10 @@ namespace DnevnaDoza.Data.Migrations
 
                     b.HasKey("IDNarudzbe");
 
+                    b.HasIndex("IDKorisnika");
+
+                    b.HasIndex("IDObradaNarudzbe");
+
                     b.ToTable("NarudzbaProizvoda", (string)null);
                 });
 
@@ -503,6 +507,25 @@ namespace DnevnaDoza.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("DnevnaDoza.Models.NarudzbaProizvoda", b =>
+                {
+                    b.HasOne("DnevnaDoza.Models.Korisnik", "Korisnik")
+                        .WithMany()
+                        .HasForeignKey("IDKorisnika")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DnevnaDoza.Models.ObradaNarudzbe", "ObradaNarudzbe")
+                        .WithMany()
+                        .HasForeignKey("IDObradaNarudzbe")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Korisnik");
+
+                    b.Navigation("ObradaNarudzbe");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

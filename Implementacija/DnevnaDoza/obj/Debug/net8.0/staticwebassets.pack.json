@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Alora.png",
+      "PackagePath": "staticwebassets\\images\\Alora.png"
+    },
+    {
       "Id": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
@@ -121,16 +125,8 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
-    },
-    {
       "Id": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
-    },
-    {
-      "Id": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
       "Id": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",

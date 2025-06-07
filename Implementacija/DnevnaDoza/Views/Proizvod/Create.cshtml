@@ -34,6 +34,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Kategorija" class="control-label"></label>
+                <!--Binfing sa enumom kategorija  dobijamo padajucu listu-->
                 <select asp-for="Kategorija" class="form-control" asp-items="ViewBag.Kategorije"></select>
                 <span asp-validation-for="Kategorija" class="text-danger"></span>
             </div>
