@@ -968,3 +968,9 @@ C:\Users\Korisnik\Desktop\Pokusaj\Grupa1-Tim4\Implementacija\DnevnaDoza\obj\Debu
 C:\Users\Korisnik\Desktop\Pokusaj\Grupa1-Tim4\Implementacija\DnevnaDoza\obj\Debug\net8.0\DnevnaDoza.pdb
 C:\Users\Korisnik\Desktop\Pokusaj\Grupa1-Tim4\Implementacija\DnevnaDoza\obj\Debug\net8.0\DnevnaDoza.genruntimeconfig.cache
 C:\Users\Korisnik\Desktop\Pokusaj\Grupa1-Tim4\Implementacija\DnevnaDoza\obj\Debug\net8.0\ref\DnevnaDoza.dll
+C:\Users\Korisnik\Desktop\Pokusaj\Grupa1-Tim4\Implementacija\DnevnaDoza\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\Korisnik\Desktop\Pokusaj\Grupa1-Tim4\Implementacija\DnevnaDoza\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\Korisnik\Desktop\Pokusaj\Grupa1-Tim4\Implementacija\DnevnaDoza\bin\Debug\net8.0\MailKit.dll
+C:\Users\Korisnik\Desktop\Pokusaj\Grupa1-Tim4\Implementacija\DnevnaDoza\bin\Debug\net8.0\MimeKit.dll
+C:\Users\Korisnik\Desktop\Pokusaj\Grupa1-Tim4\Implementacija\DnevnaDoza\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Korisnik\Desktop\Pokusaj\Grupa1-Tim4\Implementacija\DnevnaDoza\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
