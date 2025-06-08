@@ -12,7 +12,7 @@
 <!--Dodavanje linkovanja za stranice-->
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-3">
+        <nav class="navbar navbar-expand-sm navbar-dark mb-3" style="background-color: #d52e5c;">
 
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DnevnaDoza</a>
@@ -25,18 +25,22 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Korisniks" asp-action="Index">Korisnici</a>
+                        </li>}
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Apoteka" asp-action="Index">Apoteka</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Proizvod" asp-action="Index">Proizvodi</a>
                         </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Korpa" asp-action="Index">Korpa</a>
-                        </li>
+                        </li>}
                     </ul>
                   
                     <partial name="_LoginPartial" />
