@@ -14,9 +14,29 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options =>
-    options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+// originalno bilo tu, nisam sigurna treba li brisati
+/*builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+options.SignIn.RequireConfirmedAccount = true)
+ .AddRoles<IdentityRole>()
+ .AddEntityFrameworkStores<ApplicationDbContext>();*/
+
+// receno u labu da dodamo za login
+builder.Services.AddDefaultIdentity<IdentityUser>(
+options => {
+    options.SignIn.RequireConfirmedAccount = true;
+    options.Password = new PasswordOptions
+    {
+        RequireDigit = false,
+        RequiredLength = 5,
+        RequireLowercase = false,
+        RequireUppercase = false,
+        RequireNonAlphanumeric = false,
+    };
+})
+ .AddRoles<IdentityRole>()
+.AddEntityFrameworkStores<ApplicationDbContext>();
+
+
 
 builder.Services.AddControllersWithViews();
 
@@ -49,3 +69,5 @@ app.MapControllerRoute(
 app.MapRazorPages();
 
 app.Run();
+
+

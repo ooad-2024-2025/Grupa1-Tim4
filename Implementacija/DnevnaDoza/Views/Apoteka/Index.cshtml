@@ -48,10 +48,15 @@
             <td>
                 @Html.DisplayFor(modelItem => item.RadnoVrijeme)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Uredi</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Detalji</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Izbrisi</a>
+                <td>
+                @if (User.IsInRole("Administrator"))
+                {
+                    <a asp-action="Edit" asp-route-id="@item.Id">Uredi</a>
+                    <nobr>|</nobr>
+                    <a asp-action="Delete" asp-route-id="@item.Id">Izbrisi</a>
+                    <nobr>|</nobr>
+                }
+                <a asp-action="Details" asp-route-id="@item.Id">Detalji</a> 
             </td>
         </tr>
 }

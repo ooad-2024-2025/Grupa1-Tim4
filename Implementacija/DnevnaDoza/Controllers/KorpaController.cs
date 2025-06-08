@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DnevnaDoza.Data;
 using DnevnaDoza.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DnevnaDoza.Controllers
 {
+    [Authorize]
     public class KorpaController : Controller
     {
         private readonly ApplicationDbContext _context;

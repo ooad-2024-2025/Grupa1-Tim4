@@ -8,9 +8,13 @@ using Microsoft.EntityFrameworkCore;
 using DnevnaDoza.Data;
 using DnevnaDoza.Models;
 using DnevnaDoza.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DnevnaDoza.Controllers
 {
+
+
+    [Authorize]
     public class NarudzbaProizvodaController : Controller
     {
         private readonly ApplicationDbContext _context;

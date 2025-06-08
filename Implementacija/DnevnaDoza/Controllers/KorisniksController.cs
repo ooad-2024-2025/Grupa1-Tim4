@@ -10,10 +10,12 @@ using DnevnaDoza.Models;
 using Org.BouncyCastle.Crypto.Generators;
 using DnevnaDoza.Services;
 using BCrypt.Net;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace DnevnaDoza.Controllers
 {
+    [Authorize]
     public class KorisniksController : Controller
     {
         private readonly ApplicationDbContext _context;
