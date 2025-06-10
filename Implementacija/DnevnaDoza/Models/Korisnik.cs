@@ -32,6 +32,9 @@ namespace DnevnaDoza.Models
         [ForeignKey("Apoteka")]
         public int IDApoteke { get; set; }
 
+        public bool EmailConfirmed { get; set; } = false;
+        public string ConfirmationToken { get; set; }
+
         // Navigacijsko svojstvo
         //public Apoteka Apoteka { get; set; }
 

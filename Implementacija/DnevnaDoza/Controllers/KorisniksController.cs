@@ -12,6 +12,11 @@ using DnevnaDoza.Services;
 using BCrypt.Net;
 using Microsoft.AspNetCore.Authorization;
 
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Security.Claims;
+using DnevnaDoza.Models; // Za LoginViewModel
+
 
 namespace DnevnaDoza.Controllers
 {
@@ -67,24 +72,148 @@ namespace DnevnaDoza.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Provjera postoji li već korisnik s istim korisničkim imenom ili emailom
+                var existingUser = await _context.Korisnik
+                    .FirstOrDefaultAsync(k => k.KorisnickoIme == korisnik.KorisnickoIme || k.EMail == korisnik.EMail);
+                if (existingUser != null)
+                {
+                    ModelState.AddModelError("", "Korisničko ime ili email već postoji.");
+                    return View(korisnik);
+                }
+
                 // Hashovanje lozinke
                 korisnik.Lozinka = BCrypt.Net.BCrypt.HashPassword(korisnik.Lozinka);
 
-                // čuvanje korisnika u bazi
+                // Generiranje jedinstvenog potvrdivnog tokena
+                korisnik.ConfirmationToken = Guid.NewGuid().ToString();
+
+                // Čuvanje korisnika u bazi podataka
                 _context.Add(korisnik);
                 await _context.SaveChangesAsync();
 
-                // slanje e-mail obavještenje
-                string subject = "Dobrodošli!";
-                string body = $"Poštovani {korisnik.Ime},<br/><br/>Hvala što ste se registrovali na našu platformu!";
+                // Generiranje URL-a za potvrdu emaila
+                var confirmationLink = Url.Action("ConfirmEmail", "Korisniks", new { token = korisnik.ConfirmationToken }, protocol: HttpContext.Request.Scheme);
+
+                // Sastavljanje emaila
+                string subject = "Potvrda registracije";
+                string body = $"Poštovani {korisnik.Ime},<br/><br/>" +
+                              $"Hvala što ste se registrovali na našu platformu.<br/>" +
+                              $"Molimo vas da potvrdite vašu email adresu klikom na link ispod:<br/>" +
+                              $"<a href='{confirmationLink}'>Potvrdi email</a>";
+
+                // Slanje emaila
                 await _emailServis.SendEmailAsync(korisnik.EMail, subject, body);
 
-                TempData["Message"] = "Registracija uspješna! Provjerite svoj e-mail.";
-                return RedirectToAction(nameof(Index));
+                // Prikazivanje poruke korisniku
+                TempData["Message"] = "Registracija uspješna! Molimo provjerite vaš email na link za potvrdu.";
+                return RedirectToAction("RegistrationConfirmation");
             }
 
             return View(korisnik);
         }
+
+        public IActionResult RegistrationConfirmation()
+        {
+            return View();
+        }
+
+
+        public async Task<IActionResult> ConfirmEmail(string token)
+        {
+            if (string.IsNullOrEmpty(token))
+            {
+                return BadRequest("Invalid token.");
+            }
+
+            var korisnik = await _context.Korisnik
+                .FirstOrDefaultAsync(k => k.ConfirmationToken == token);
+
+            if (korisnik == null)
+            {
+                return NotFound("Invalid token.");
+            }
+
+            // Označavanje emaila kao potvrđenog
+            korisnik.EmailConfirmed = true;
+            korisnik.ConfirmationToken = null; // Uklanjanje tokena nakon potvrde
+
+            _context.Update(korisnik);
+            await _context.SaveChangesAsync();
+
+            TempData["Message"] = "Email adresa uspješno potvrđena! Sada se možete prijaviti.";
+            return RedirectToAction("ConfirmEmailSuccess");
+        }
+
+        public IActionResult ConfirmEmailSuccess()
+        {
+            return View();
+        }
+
+
+
+        [AllowAnonymous]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var korisnik = await _context.Korisnik
+                    .FirstOrDefaultAsync(k => k.KorisnickoIme == model.KorisnickoIme);
+
+                if (korisnik != null && BCrypt.Net.BCrypt.Verify(model.Lozinka, korisnik.Lozinka))
+                {
+                    if (!korisnik.EmailConfirmed)
+                    {
+                        ModelState.AddModelError("", "Molimo vas da potvrdite vašu email adresu prije prijave.");
+                        return View(model);
+                    }
+
+                    // Kreiranje korisničkih tvrdnji (claims)
+                    var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, korisnik.KorisnickoIme),
+                new Claim(ClaimTypes.NameIdentifier, korisnik.IDKorisnik.ToString()),
+                // Dodajte dodatne tvrdnje ako je potrebno
+            };
+
+                    var claimsIdentity = new ClaimsIdentity(
+                        claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                    var authProperties = new AuthenticationProperties
+                    {
+                        // Opcionalno: postavite opcije autentifikacije, npr. trajanje kolačića
+                    };
+
+                    await HttpContext.SignInAsync(
+                        CookieAuthenticationDefaults.AuthenticationScheme,
+                        new ClaimsPrincipal(claimsIdentity),
+                        authProperties);
+
+                    return RedirectToAction("Index", "Home");
+                }
+
+                ModelState.AddModelError("", "Neispravno korisničko ime ili lozinka.");
+            }
+
+            return View(model);
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Index", "Home");
+        }
+
+
+
+
 
         // GET: Korisniks/Edit/5
         public async Task<IActionResult> Edit(int? id)

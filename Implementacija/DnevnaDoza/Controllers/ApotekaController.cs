@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 
 namespace DnevnaDoza.Controllers
 {
+
     public class ApotekaController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -25,10 +26,10 @@ namespace DnevnaDoza.Controllers
 
         [Authorize(Roles = "Administrator, Korisnik")]
         // GET: Apotekas
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.Apoteka.ToListAsync());
-        }
+         public async Task<IActionResult> Index()
+          {
+              return View(await _context.Apoteka.ToListAsync());
+          }
 
         // GET: Apotekas/Details/5
         [Authorize(Roles = "Administrator, Korisnik")]
