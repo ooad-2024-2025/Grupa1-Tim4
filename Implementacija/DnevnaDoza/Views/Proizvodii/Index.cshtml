@@ -1,0 +1,21 @@
+﻿ProizvodiiIndex<div class="row row-cols-1 row-cols-md-3 g-4">
+    @foreach (var item in Model)
+    {
+        <div class="col">
+            <div class="card h-100 text-center p-3 border-secondary">
+                <div style="height: 150px; display: flex; justify-content: center; align-items: center; background-color: #f9f9f9; border: 1px dashed #ccc;">
+                    <img src="~/images/@(item.Naziv).png"
+                         onerror="this.onerror=null;this.src='~/images/default.png';"
+                         alt="@item.Naziv"
+                         style="max-height: 140px; max-width: 100%; object-fit: contain;" />
+                </div>
+                <div class="card-body">
+                    <a href="/Proizvod/Details/@item.ID">
+                        <h5 class="card-title">@item.Naziv</h5>
+                    </a>
+                    <p class="card-text"><strong>@item.Cijena.ToString("0.00") KM</strong></p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

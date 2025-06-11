@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\images\\Alora.png"
     },
     {
+      "Id": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Paracetamol.png",
+      "PackagePath": "staticwebassets\\images\\Paracetamol.png"
+    },
+    {
       "Id": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

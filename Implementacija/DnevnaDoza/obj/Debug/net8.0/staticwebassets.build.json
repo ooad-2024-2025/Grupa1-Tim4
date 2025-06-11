@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GhLmiqU8AThUjzgRX7Eoib9srH2gERZomdsvWfBbvJQ=",
+  "Hash": "wd1DG7EC5abWV+xo5qySSF4PrqkM3ShLIItVgJRKCew=",
   "Source": "DnevnaDoza",
   "BasePath": "_content/DnevnaDoza",
   "Mode": "Default",
@@ -1380,6 +1380,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Alora.png"
+    },
+    {
+      "Identity": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Paracetamol.png",
+      "SourceId": "DnevnaDoza",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\",
+      "BasePath": "_content/DnevnaDoza",
+      "RelativePath": "images/Paracetamol#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x2ujix478u",
+      "Integrity": "92rVkFey56ezASJ+ROsMIvbMO5c4e72SPZLtxkSPGlo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Paracetamol.png"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\js\\site.js",
@@ -5186,6 +5207,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-YXWCPr22DK76xH6zwXqzFDLyNu3QH7ZLp28EmqMsZ2g="
+        }
+      ]
+    },
+    {
+      "Route": "images/Paracetamol.png",
+      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Paracetamol.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "131055"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"92rVkFey56ezASJ+ROsMIvbMO5c4e72SPZLtxkSPGlo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Jun 2025 12:07:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-92rVkFey56ezASJ+ROsMIvbMO5c4e72SPZLtxkSPGlo="
+        }
+      ]
+    },
+    {
+      "Route": "images/Paracetamol.x2ujix478u.png",
+      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Paracetamol.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "131055"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"92rVkFey56ezASJ+ROsMIvbMO5c4e72SPZLtxkSPGlo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Jun 2025 12:07:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x2ujix478u"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Paracetamol.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-92rVkFey56ezASJ+ROsMIvbMO5c4e72SPZLtxkSPGlo="
         }
       ]
     },
