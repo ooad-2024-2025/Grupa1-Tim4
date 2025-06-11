@@ -1,0 +1,32 @@
+﻿@model IEnumerable<DnevnaDoza.Models.Proizvod>
+@{
+    ViewData["Title"] = "Prikaz po kategoriji";
+    var kategorija = Model.FirstOrDefault()?.Kategorija.ToString() ?? "Nepoznata";
+}
+
+<h1>Prikaz proizvoda iz kategorije: @kategorija</h1>
+
+@if (!Model.Any())
+{
+    <p>Nema proizvoda u ovoj kategoriji.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Naziv</th>
+                <th>Cijena</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Naziv</td>
+                    <td>@item.Cijena KM</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

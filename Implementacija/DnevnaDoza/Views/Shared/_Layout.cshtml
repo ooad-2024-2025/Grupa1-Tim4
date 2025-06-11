@@ -68,7 +68,7 @@
                                 @foreach (var kategorija in Enum.GetValues(typeof(KategorijeProizvoda)).Cast<KategorijeProizvoda>())
                                 {
                                     <li>
-                                        <a class="dropdown-item" asp-controller="Proizvod" asp-action="Index" asp-route-kategorija="@kategorija">
+                                        <a class="dropdown-item" asp-controller="Prikaz" asp-action="Index" asp-route-kategorija="@kategorija">
                                             @GetDisplayName(kategorija)
                                         </a>
                                     </li>
