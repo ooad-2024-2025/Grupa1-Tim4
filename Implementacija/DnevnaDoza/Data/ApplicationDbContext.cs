@@ -32,5 +32,6 @@ namespace DnevnaDoza.Data
             modelBuilder.Entity<StavkeNarudzbe>().ToTable("StavkeNarudzbe");
             base.OnModelCreating(modelBuilder);
         }
+        public DbSet<DnevnaDoza.Models.ChackOut> ChackOut { get; set; } = default!;
     }
 }

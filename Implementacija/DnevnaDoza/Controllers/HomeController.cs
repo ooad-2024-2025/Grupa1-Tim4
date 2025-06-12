@@ -12,6 +12,23 @@ namespace DnevnaDoza.Controllers
         {
             _logger = logger;
         }
+        //ubacneo sa chata
+        public IActionResult Login(string returnUrl = null)
+        {
+            ViewData["ReturnUrl"] = returnUrl;
+            return View();
+        }
+
+        //sumeja dodala
+        [HttpPost]
+
+        public IActionResult Login(LoginViewModel model)
+        {
+            
+
+            // If login fails, redirect to Home Index
+            return RedirectToAction("Index", "Home");
+        }
 
         public IActionResult Index()
         {

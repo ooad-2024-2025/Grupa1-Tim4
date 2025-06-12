@@ -55,6 +55,38 @@ namespace DnevnaDoza.Data.Migrations
                     b.ToTable("Apoteka", (string)null);
                 });
 
+            modelBuilder.Entity("DnevnaDoza.Models.ChackOut", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("Cijena")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Kolicina")
+                        .HasColumnType("int");
+
+                    b.Property<string>("KorisnikId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Naziv")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProizvodId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProizvodId");
+
+                    b.ToTable("ChackOut");
+                });
+
             modelBuilder.Entity("DnevnaDoza.Models.ERacun", b =>
                 {
                     b.Property<int>("IDRacuna")
@@ -108,6 +140,10 @@ namespace DnevnaDoza.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ConfirmationToken")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateOnly>("DatumIstekaKartice")
                         .HasColumnType("date");
 
@@ -117,6 +153,9 @@ namespace DnevnaDoza.Data.Migrations
                     b.Property<string>("EMail")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
 
                     b.Property<int>("IDApoteke")
                         .HasColumnType("int");
@@ -507,6 +546,17 @@ namespace DnevnaDoza.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("DnevnaDoza.Models.ChackOut", b =>
+                {
+                    b.HasOne("DnevnaDoza.Models.Proizvod", "Proizvod")
+                        .WithMany()
+                        .HasForeignKey("ProizvodId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Proizvod");
                 });
 
             modelBuilder.Entity("DnevnaDoza.Models.NarudzbaProizvoda", b =>

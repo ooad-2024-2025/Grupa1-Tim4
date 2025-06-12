@@ -1,0 +1,44 @@
+﻿@model List<DnevnaDoza.Models.ChackOut>
+
+<h2>Moja korpa</h2>
+
+<table class="table table-bordered text-center">
+    <thead class="table-dark">
+        <tr>
+            <th>Naziv</th>
+            <th>Cijena</th>
+            <th>Količina</th>
+            <th>Ukupno</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Naziv</td>
+                <td>@item.Cijena.ToString("0.00") KM</td>
+                <td>@item.Kolicina</td>
+                <td>@(item.Cijena* item.Kolicina) KM</td>
+
+                <td>
+                    <form asp-action="Umanji" asp-controller="ChackOuts" method="post">
+                        <input type="hidden" name="id" value="@item.Id" />
+                        <button type="submit" class="btn btn-danger btn-sm">Ukloni</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@{
+    var ukupno = Model.Sum(item => item.Cijena * item.Kolicina);
+}
+
+<div class="text-center mt-4">
+    <h4>Ukupno za platiti: @ukupno.ToString("0.00") KM</h4>
+    <form asp-action="ZavrsiNarudzbu" asp-controller="ChackOuts" method="post" class="d-inline-block mt-2">
+        <button type="submit" class="btn btn-success btn-lg">Završi narudžbu</button>
+    </form>
+</div>

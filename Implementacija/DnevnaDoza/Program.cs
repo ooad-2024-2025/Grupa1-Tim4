@@ -1,50 +1,40 @@
-using DnevnaDoza.Data;
+﻿using DnevnaDoza.Data;
 using DnevnaDoza.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add services to the container
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
     ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
+// Configure Entity Framework with SQL Server
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
-builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+// Register Email Service with Scoped lifetime
+builder.Services.AddScoped<EmailServis>();
 
-// originalno bilo tu, nisam sigurna treba li brisati
-/*builder.Services.AddDefaultIdentity<IdentityUser>(options =>
-options.SignIn.RequireConfirmedAccount = true)
- .AddRoles<IdentityRole>()
- .AddEntityFrameworkStores<ApplicationDbContext>();*/
-
-// receno u labu da dodamo za login
-builder.Services.AddDefaultIdentity<IdentityUser>(
-options => {
+// Configure Identity
+builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+{
     options.SignIn.RequireConfirmedAccount = true;
-    options.Password = new PasswordOptions
-    {
-        RequireDigit = false,
-        RequiredLength = 5,
-        RequireLowercase = false,
-        RequireUppercase = false,
-        RequireNonAlphanumeric = false,
-    };
+    options.Password.RequiredLength = 5;
+    options.Password.RequireDigit = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireNonAlphanumeric = false;
 })
- .AddRoles<IdentityRole>()
+.AddRoles<IdentityRole>()
 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-
-
 builder.Services.AddControllersWithViews();
-
-builder.Services.AddScoped<EmailServis>();
+builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();
@@ -52,7 +42,6 @@ if (app.Environment.IsDevelopment())
 else
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -61,6 +50,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
@@ -69,5 +59,3 @@ app.MapControllerRoute(
 app.MapRazorPages();
 
 app.Run();
-
-

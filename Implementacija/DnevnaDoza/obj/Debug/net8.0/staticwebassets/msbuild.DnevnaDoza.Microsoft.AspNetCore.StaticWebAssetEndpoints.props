@@ -48,6 +48,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-YXWCPr22DK76xH6zwXqzFDLyNu3QH7ZLp28EmqMsZ2g="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"124694"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022YXWCPr22DK76xH6zwXqzFDLyNu3QH7ZLp28EmqMsZ2g=\u0022"},{"Name":"Last-Modified","Value":"Thu, 05 Jun 2025 17:39:53 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/DnevnaDoza/images/Paracetamol.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Paracetamol.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-92rVkFey56ezASJ\u002BROsMIvbMO5c4e72SPZLtxkSPGlo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"131055"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u002292rVkFey56ezASJ\u002BROsMIvbMO5c4e72SPZLtxkSPGlo=\u0022"},{"Name":"Last-Modified","Value":"Wed, 11 Jun 2025 12:07:26 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/DnevnaDoza/images/Paracetamol.x2ujix478u.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Paracetamol.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"x2ujix478u"},{"Name":"integrity","Value":"sha256-92rVkFey56ezASJ\u002BROsMIvbMO5c4e72SPZLtxkSPGlo="},{"Name":"label","Value":"_content/DnevnaDoza/images/Paracetamol.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"131055"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u002292rVkFey56ezASJ\u002BROsMIvbMO5c4e72SPZLtxkSPGlo=\u0022"},{"Name":"Last-Modified","Value":"Wed, 11 Jun 2025 12:07:26 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/DnevnaDoza/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

@@ -76,12 +76,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBvdGVrYVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Apoteka/InformacijeOApoteci.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBvdGVrYVxJbmZvcm1hY2lqZU9BcG90ZWNpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/ChackOuts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhY2tPdXRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/ChackOuts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhY2tPdXRzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/ChackOuts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhY2tPdXRzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/ChackOuts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhY2tPdXRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/ChackOuts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhY2tPdXRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Korisniks/ConfirmEmailSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtzXENvbmZpcm1FbWFpbFN1Y2Nlc3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Korisniks/Create.cshtml]
@@ -102,6 +130,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Korisniks/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Korisniks/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtzXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Korisniks/RegistrationConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtzXFJlZ2lzdHJhdGlvbkNvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Korpa/Create.cshtml]
@@ -142,6 +178,46 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/NarudzbaProizvoda/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmFydWR6YmFQcm9penZvZGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Prikaz/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpa2F6XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Prikaz/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpa2F6XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Prikaz/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpa2F6XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Prikaz/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpa2F6XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Prikaz/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpa2F6XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Proizvodii/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvaXp2b2RpaVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Proizvodii/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvaXp2b2RpaVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Proizvodii/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvaXp2b2RpaVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Proizvodii/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvaXp2b2RpaVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Proizvodii/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvaXp2b2RpaVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Korisnik/Desktop/Pokusaj/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Proizvod/Create.cshtml]
