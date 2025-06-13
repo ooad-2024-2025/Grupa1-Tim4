@@ -1,12 +1,9 @@
 ﻿@model DnevnaDoza.Models.LoginViewModel
 
-@{
-    ViewData["Title"] = "Prijava";
-}
 
 <h2>Prijava</h2>
 
-<form asp-action="Login" method="post">
+<form asp-controller="Korisniks" asp-action="Login" method="post">
     <div class="form-group">
         <label asp-for="KorisnickoIme"></label>
         <input asp-for="KorisnickoIme" class="form-control" />
@@ -19,16 +16,3 @@
     </div>
     <button type="submit" class="btn btn-primary">Prijavi se</button>
 </form>
-
-@if (TempData["Message"] != null)
-{
-    <div class="alert alert-success mt-3">
-        @TempData["Message"]
-    </div>
-}
-
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}
