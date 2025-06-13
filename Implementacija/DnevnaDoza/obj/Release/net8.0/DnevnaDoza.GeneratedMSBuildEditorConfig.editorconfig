@@ -100,6 +100,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhY2tPdXRzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/User/source/repos/ooad-2024-2025/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/ChackOuts/ZavrsiNarudzbu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhY2tPdXRzXFphdnJzaU5hcnVkemJ1LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/source/repos/ooad-2024-2025/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -158,6 +162,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/User/source/repos/ooad-2024-2025/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Korpa/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29ycGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ooad-2024-2025/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/Korpa/ZavrsiNarudzbu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29ycGFcWmF2cnNpTmFydWR6YnUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/source/repos/ooad-2024-2025/Grupa1-Tim4/Implementacija/DnevnaDoza/Views/NarudzbaProizvoda/Create.cshtml]

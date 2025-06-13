@@ -1,0 +1,51 @@
+﻿@model DnevnaDoza.Models.NarudzbaViewModel
+
+<h2>Završi narudžbu</h2>
+
+<form asp-action="ZavrsiNarudzbu" method="post">
+    <div>
+        <label for="Ime">Ime</label>
+        <input type="text" id="Ime" asp-for="Ime" />
+        <span asp-validation-for="Ime"></span>
+    </div>
+    <div>
+        <label for="Prezime">Prezime</label>
+        <input type="text" id="Prezime" asp-for="Prezime" />
+        <span asp-validation-for="Prezime"></span>
+    </div>
+    <div>
+        <label for="Adresa">Adresa</label>
+        <input type="text" id="Adresa" asp-for="Adresa" />
+        <span asp-validation-for="Adresa"></span>
+    </div>
+    <div>
+        <label for="Grad">Grad</label>
+        <input type="text" id="Grad" asp-for="Grad" />
+        <span asp-validation-for="Grad"></span>
+    </div>
+    <div>
+        <label for="PostanskiBroj">Poštanski broj</label>
+        <input type="text" id="PostanskiBroj" asp-for="PostanskiBroj" />
+        <span asp-validation-for="PostanskiBroj"></span>
+    </div>
+    <div>
+        <label for="BrojKartice">Broj kartice</label>
+        <input type="text" id="BrojKartice" asp-for="BrojKartice" />
+        <span asp-validation-for="BrojKartice"></span>
+    </div>
+    <div>
+        <label for="DatumIstekaKartice">Datum isteka kartice</label>
+        <input type="date" id="DatumIstekaKartice" asp-for="DatumIstekaKartice" />
+        <span asp-validation-for="DatumIstekaKartice"></span>
+    </div>
+    <div>
+        <label for="CVC">CVC</label>
+        <input type="text" id="CVC" asp-for="CVC" />
+        <span asp-validation-for="CVC"></span>
+    </div>
+    <button type="submit">Završi narudžbu</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

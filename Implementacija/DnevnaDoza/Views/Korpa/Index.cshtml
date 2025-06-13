@@ -68,3 +68,34 @@
 }
     </tbody>
 </table>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.StanjeKorpe)</th>
+            <th>@Html.DisplayNameFor(model => model.BrojProizvoda)</th>
+            <th>@Html.DisplayNameFor(model => model.UkupanIznos)</th>
+            <th>Akcije</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.StanjeKorpe)</td>
+                <td>@Html.DisplayFor(modelItem => item.BrojProizvoda)</td>
+                <td>@Html.DisplayFor(modelItem => item.UkupanIznos)</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.ID">Detalji</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- dugme za završavanje narudžbe -->
+<div style="margin-top: 20px;">
+    <a asp-action="ZavrsiNarudzbu" asp-controller="ChackOuts" class="btn btn-primary">
+        Završi narudžbicu
+    </a>
+</div>
