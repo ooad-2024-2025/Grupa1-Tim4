@@ -23,8 +23,7 @@ namespace DnevnaDoza.Models
         public int IDNarudzbe { get; set; }
 
         // Navigacijska svojstva
-        public virtual Proizvod Proizvod { get; set; }
-        // public Korisnik Korisnik { get; set; }
+       // public Korisnik Korisnik { get; set; }
         //public NarudzbaProizvoda NarudzbaProizvoda { get; set; }
     }
 }

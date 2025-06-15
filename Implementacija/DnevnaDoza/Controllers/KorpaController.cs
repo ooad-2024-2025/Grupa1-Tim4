@@ -8,8 +8,6 @@ using Microsoft.EntityFrameworkCore;
 using DnevnaDoza.Data;
 using DnevnaDoza.Models;
 using Microsoft.AspNetCore.Authorization;
-using System.Security.Claims;
-using DnevnaDoza.Services;
 
 namespace DnevnaDoza.Controllers
 {
@@ -17,12 +15,10 @@ namespace DnevnaDoza.Controllers
     public class KorpaController : Controller
     {
         private readonly ApplicationDbContext _context;
-       
 
         public KorpaController(ApplicationDbContext context)
         {
             _context = context;
-           
         }
 
         // GET: Korpas
@@ -151,10 +147,6 @@ namespace DnevnaDoza.Controllers
 
             return View(korpa);
         }
-
-
-      
-     
 
         // POST: Korpas/Delete/5
         [HttpPost, ActionName("Delete")]

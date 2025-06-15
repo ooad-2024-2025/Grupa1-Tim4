@@ -58,7 +58,6 @@ namespace DnevnaDoza.Controllers
         }
 
         // GET: Korisniks/Create
-        [AllowAnonymous]
         public IActionResult Create()
         {
             return View();
@@ -163,79 +162,46 @@ namespace DnevnaDoza.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
-            // DEBUG: Dodajmo ovu liniju da vidite da li se metoda poziva
-            Console.WriteLine($"=== LOGIN POST POZVAN ===");
-            Console.WriteLine($"Username: {model?.KorisnickoIme}");
-            Console.WriteLine($"Password length: {model?.Lozinka?.Length}");
-
             if (ModelState.IsValid)
             {
-                Console.WriteLine("✅ ModelState je valjan");
-
                 var korisnik = await _context.Korisnik
                     .FirstOrDefaultAsync(k => k.KorisnickoIme == model.KorisnickoIme);
 
-                Console.WriteLine($"Korisnik pronađen u bazi: {korisnik != null}");
-
-                if (korisnik != null)
+                if (korisnik != null && BCrypt.Net.BCrypt.Verify(model.Lozinka, korisnik.Lozinka))
                 {
-                    Console.WriteLine($"Korisnik ID: {korisnik.IDKorisnik}");
-                    Console.WriteLine($"EmailConfirmed: {korisnik.EmailConfirmed}");
-
-                    bool passwordMatch = BCrypt.Net.BCrypt.Verify(model.Lozinka, korisnik.Lozinka);
-                    Console.WriteLine($"Password match: {passwordMatch}");
-
-                    if (passwordMatch)
+                    if (!korisnik.EmailConfirmed)
                     {
-                        if (!korisnik.EmailConfirmed)
-                        {
-                            Console.WriteLine("❌ Email nije potvrđen");
-                            ModelState.AddModelError("", "Molimo vas da potvrdite vašu email adresu prije prijave.");
-                            return View(model);
-                        }
-
-                        Console.WriteLine("✅ Kreiranje claims i signin...");
-
-                        // Kreiranje korisničkih tvrdnji (claims)
-                        var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, korisnik.KorisnickoIme),
-                    new Claim(ClaimTypes.NameIdentifier, korisnik.IDKorisnik.ToString()),
-                    new Claim(ClaimTypes.Role, korisnik.TipKorisnika.ToString())
-                };
-
-                        var claimsIdentity = new ClaimsIdentity(
-                            claims, CookieAuthenticationDefaults.AuthenticationScheme);
-
-                        var authProperties = new AuthenticationProperties
-                        {
-                            IsPersistent = true,
-                            ExpiresUtc = DateTimeOffset.UtcNow.AddDays(30)
-                        };
-
-                        await HttpContext.SignInAsync(
-                            CookieAuthenticationDefaults.AuthenticationScheme,
-                            new ClaimsPrincipal(claimsIdentity),
-                            authProperties);
-
-                        Console.WriteLine("✅ SignIn uspješan - preusmjeravanje na Home");
-                        return RedirectToAction("Index", "Home");
+                        ModelState.AddModelError("", "Molimo vas da potvrdite vašu email adresu prije prijave.");
+                        return View(model);
                     }
+
+                    // Kreiranje korisničkih tvrdnji (claims)
+                    var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, korisnik.KorisnickoIme),
+                new Claim(ClaimTypes.NameIdentifier, korisnik.IDKorisnik.ToString()),
+                // Dodajte dodatne tvrdnje ako je potrebno
+            };
+
+                    var claimsIdentity = new ClaimsIdentity(
+                        claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                    var authProperties = new AuthenticationProperties
+                    {
+                        // Opcionalno: postavite opcije autentifikacije, npr. trajanje kolačića
+                    };
+
+                    await HttpContext.SignInAsync(
+                        CookieAuthenticationDefaults.AuthenticationScheme,
+                        new ClaimsPrincipal(claimsIdentity),
+                        authProperties);
+
+                    return RedirectToAction("Index", "Home");
                 }
 
-                Console.WriteLine("❌ Pogrešno korisničko ime ili lozinka");
                 ModelState.AddModelError("", "Neispravno korisničko ime ili lozinka.");
             }
-            else
-            {
-                Console.WriteLine("❌ ModelState nije valjan:");
-                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
-                {
-                    Console.WriteLine($"   - {error.ErrorMessage}");
-                }
-            }
 
-            Console.WriteLine("Vraćam View sa modelom");
             return View(model);
         }
 
@@ -337,44 +303,5 @@ namespace DnevnaDoza.Controllers
         {
             return _context.Korisnik.Any(e => e.IDKorisnik == id);
         }
-
-
-        [AllowAnonymous]
-        public async Task<IActionResult> CreateTestUser()
-        {
-            // Provjeri da li već postoji test korisnik
-            var existing = await _context.Korisnik.FirstOrDefaultAsync(k => k.KorisnickoIme == "test");
-            if (existing != null)
-            {
-                return Content($"Test korisnik već postoji! ID: {existing.IDKorisnik}, EmailConfirmed: {existing.EmailConfirmed}");
-            }
-
-            var testUser = new Korisnik
-            {
-                Ime = "Test",
-                Prezime = "User",
-                KorisnickoIme = "test",
-                Lozinka = BCrypt.Net.BCrypt.HashPassword("123456"),
-                EMail = "test@test.com",
-                EmailConfirmed = true, // VAŽNO!
-                TipKorisnika = TipKorisnika.RegistrovaniKorisnik,
-                DatumZaposlenja = DateOnly.FromDateTime(DateTime.Now),
-                IDApoteke = 1,
-                BrojTelefona = "123456789",
-                MjestoStanovanja = "Test Grad",
-                PostanskiBroj = "12345",
-                Adresa = "Test Adresa 1",
-                CVC = "123",
-                DatumIstekaKartice = DateOnly.FromDateTime(DateTime.Now.AddYears(2)),
-                BrojKartice = "1234567890123456"
-            };
-
-            _context.Korisnik.Add(testUser);
-            await _context.SaveChangesAsync();
-
-            return Content("✅ Test korisnik kreiran uspješno!<br/>Username: test<br/>Password: 123456<br/>EmailConfirmed: true");
-        }
     }
-
-
 }

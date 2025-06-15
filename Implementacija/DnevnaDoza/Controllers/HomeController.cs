@@ -27,7 +27,7 @@ namespace DnevnaDoza.Controllers
             
 
             // If login fails, redirect to Home Index
-            return RedirectToAction("Index", "Korisniks");
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult Index()

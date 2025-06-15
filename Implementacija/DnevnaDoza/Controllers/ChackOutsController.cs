@@ -1,7 +1,5 @@
 ﻿using DnevnaDoza.Data;
 using DnevnaDoza.Models;
-using DnevnaDoza.Services;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
@@ -14,12 +12,9 @@ namespace DnevnaDoza.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        private readonly EmailServis _emailService;
-
-        public ChackOutsController(ApplicationDbContext context, EmailServis emailService)
+        public ChackOutsController(ApplicationDbContext context)
         {
             _context = context;
-            _emailService = emailService;
         }
 
         private string GetKorisnikId()
@@ -87,88 +82,6 @@ namespace DnevnaDoza.Controllers
             }
 
             return RedirectToAction("Index");
-        }
-
-        [HttpGet]
-      //  [Authorize]
-        public IActionResult ZavrsiNarudzbu()
-        {
-            return View(new NarudzbaViewModel());
-        }
-
-        [HttpPost]
-       // [Authorize]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ZavrsiNarudzbu(NarudzbaViewModel model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
-
-            var korisnikId = GetKorisnikId();
-            var korisnik = await _context.Korisnik.FirstOrDefaultAsync(k => k.IDKorisnik.ToString() == korisnikId);
-
-            if (korisnik == null)
-            {
-                return NotFound("Korisnik nije pronađen.");
-            }
-
-            // Preuzmi proizvode iz ChackOut
-            var proizvodi = await _context.ChackOut
-                .Where(c => c.KorisnikId == korisnikId)
-                .ToListAsync();
-
-            if (!proizvodi.Any())
-            {
-                ModelState.AddModelError("", "Vaša korpa je prazna.");
-                return View(model);
-            }
-
-            // Kreiraj narudžbu i račun
-            var narudzba = new NarudzbaProizvoda
-            {
-                IDKorisnika = korisnik.IDKorisnik,
-                BrojProizvoda = proizvodi.Sum(p => p.Kolicina),
-             //   UkupnaCijena = proizvodi.Sum(p => p.Cijena * p.Kolicina),
-                DatumNarudzbe = DateTime.Now
-            };
-
-            _context.NarudzbaProizvoda.Add(narudzba);
-            await _context.SaveChangesAsync();
-
-            var eRacun = new ERacun
-            {
-                IDNarudzbe = narudzba.IDNarudzbe,
-             //   IznosNarudzbe = narudzba.UkupnaCijena,
-                Datum = DateOnly.FromDateTime(DateTime.Now),
-                NazivZaposlenika = korisnik.Ime + " " + korisnik.Prezime,
-                PonistenRacun = false
-            };
-
-            _context.ERacun.Add(eRacun);
-            await _context.SaveChangesAsync();
-
-            // Generisanje i slanje računa putem e-maila
-            var emailBody = $"<h3>Račun za vašu narudžbu</h3>" +
-                            $"<p>Ukupna cijena: {narudzba.UkupnaCijena} KM</p>" +
-                            $"<h4>Proizvodi:</h4><ul>";
-
-            foreach (var proizvod in proizvodi)
-            {
-                emailBody += $"<li>{proizvod.Naziv} x {proizvod.Kolicina} = {proizvod.Cijena * proizvod.Kolicina} KM</li>";
-            }
-
-            emailBody += "</ul>";
-
-            await _emailService.SendEmailAsync(korisnik.EMail, "Vaš račun", emailBody);
-
-            // Očisti korpu (ChackOut)
-            _context.ChackOut.RemoveRange(proizvodi);
-            await _context.SaveChangesAsync();
-
-            TempData["Message"] = "Narudžba uspješno završena! Račun je poslan na e-mail.";
-            return RedirectToAction("Index", "Home");
         }
 
         // POST: /ChackOuts/Umanji
