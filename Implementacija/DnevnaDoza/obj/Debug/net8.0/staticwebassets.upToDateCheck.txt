@@ -1,6 +1,10 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\Alora.png
+wwwroot\images\Multivitamin.png
+wwwroot\images\Neofen-gel.png
+wwwroot\images\Nozici.png
+wwwroot\images\Oral-B.png
 wwwroot\images\Paracetamol.png
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wd1DG7EC5abWV+xo5qySSF4PrqkM3ShLIItVgJRKCew=",
+  "Hash": "F7koSj/kh6N7rjWemmd39FiVrwAnoUTncXZ7CTK1z0E=",
   "Source": "DnevnaDoza",
   "BasePath": "_content/DnevnaDoza",
   "Mode": "Default",
@@ -1380,6 +1380,90 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Alora.png"
+    },
+    {
+      "Identity": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Multivitamin.png",
+      "SourceId": "DnevnaDoza",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\",
+      "BasePath": "_content/DnevnaDoza",
+      "RelativePath": "images/Multivitamin#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "63ts89glj2",
+      "Integrity": "vnFXJtVfR9HLgUvAZvR06/vHSg+opE3GCauFzVgbdjE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Multivitamin.png"
+    },
+    {
+      "Identity": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Neofen-gel.png",
+      "SourceId": "DnevnaDoza",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\",
+      "BasePath": "_content/DnevnaDoza",
+      "RelativePath": "images/Neofen-gel#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vixpoefdhv",
+      "Integrity": "CUq5yKKJrAf4cL6dUZiq3KODWZqTQaxaU3/TIWsl3rA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Neofen-gel.png"
+    },
+    {
+      "Identity": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Nozici.png",
+      "SourceId": "DnevnaDoza",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\",
+      "BasePath": "_content/DnevnaDoza",
+      "RelativePath": "images/Nozici#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "eao8qqoh2c",
+      "Integrity": "ChHt+wldRdfuZ0P8fZAuaNDc37BSvo47VSH7L3vrQPo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Nozici.png"
+    },
+    {
+      "Identity": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Oral-B.png",
+      "SourceId": "DnevnaDoza",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\",
+      "BasePath": "_content/DnevnaDoza",
+      "RelativePath": "images/Oral-B#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ymslu3j9n2",
+      "Integrity": "xkGiQXRajmS7t1GGczdsBvvJHiQRtdM07XnU1agyuP8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Oral-B.png"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Paracetamol.png",
@@ -5207,6 +5291,334 @@
         {
           "Name": "integrity",
           "Value": "sha256-YXWCPr22DK76xH6zwXqzFDLyNu3QH7ZLp28EmqMsZ2g="
+        }
+      ]
+    },
+    {
+      "Route": "images/Multivitamin.63ts89glj2.png",
+      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Multivitamin.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "296120"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vnFXJtVfR9HLgUvAZvR06/vHSg+opE3GCauFzVgbdjE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Jun 2025 09:36:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "63ts89glj2"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Multivitamin.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vnFXJtVfR9HLgUvAZvR06/vHSg+opE3GCauFzVgbdjE="
+        }
+      ]
+    },
+    {
+      "Route": "images/Multivitamin.png",
+      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Multivitamin.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "296120"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vnFXJtVfR9HLgUvAZvR06/vHSg+opE3GCauFzVgbdjE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Jun 2025 09:36:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vnFXJtVfR9HLgUvAZvR06/vHSg+opE3GCauFzVgbdjE="
+        }
+      ]
+    },
+    {
+      "Route": "images/Neofen-gel.png",
+      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Neofen-gel.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "299270"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CUq5yKKJrAf4cL6dUZiq3KODWZqTQaxaU3/TIWsl3rA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Jun 2025 09:35:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CUq5yKKJrAf4cL6dUZiq3KODWZqTQaxaU3/TIWsl3rA="
+        }
+      ]
+    },
+    {
+      "Route": "images/Neofen-gel.vixpoefdhv.png",
+      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Neofen-gel.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "299270"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CUq5yKKJrAf4cL6dUZiq3KODWZqTQaxaU3/TIWsl3rA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Jun 2025 09:35:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vixpoefdhv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Neofen-gel.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CUq5yKKJrAf4cL6dUZiq3KODWZqTQaxaU3/TIWsl3rA="
+        }
+      ]
+    },
+    {
+      "Route": "images/Nozici.eao8qqoh2c.png",
+      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Nozici.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "274371"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ChHt+wldRdfuZ0P8fZAuaNDc37BSvo47VSH7L3vrQPo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Jun 2025 09:36:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eao8qqoh2c"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Nozici.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ChHt+wldRdfuZ0P8fZAuaNDc37BSvo47VSH7L3vrQPo="
+        }
+      ]
+    },
+    {
+      "Route": "images/Nozici.png",
+      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Nozici.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "274371"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ChHt+wldRdfuZ0P8fZAuaNDc37BSvo47VSH7L3vrQPo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Jun 2025 09:36:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ChHt+wldRdfuZ0P8fZAuaNDc37BSvo47VSH7L3vrQPo="
+        }
+      ]
+    },
+    {
+      "Route": "images/Oral-B.png",
+      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Oral-B.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "132561"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xkGiQXRajmS7t1GGczdsBvvJHiQRtdM07XnU1agyuP8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Jun 2025 09:35:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xkGiQXRajmS7t1GGczdsBvvJHiQRtdM07XnU1agyuP8="
+        }
+      ]
+    },
+    {
+      "Route": "images/Oral-B.ymslu3j9n2.png",
+      "AssetFile": "C:\\Users\\Administrator\\Desktop\\ProjektOOAD\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Oral-B.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "132561"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xkGiQXRajmS7t1GGczdsBvvJHiQRtdM07XnU1agyuP8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Jun 2025 09:35:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ymslu3j9n2"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Oral-B.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xkGiQXRajmS7t1GGczdsBvvJHiQRtdM07XnU1agyuP8="
         }
       ]
     },

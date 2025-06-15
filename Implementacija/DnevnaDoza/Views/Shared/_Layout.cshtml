@@ -36,33 +36,24 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+
+
+
+
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Apoteka" asp-action="InformacijeOApoteci">O nama</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Proizvodii" asp-action="Index">Proizvodi</a>
                         </li>
+
+
 
                         @if (User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Korisniks" asp-action="Index">Korisnici</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="ChackOuts" asp-action="Index">Korpa</a>
                             </li>
                         }
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Apoteka" asp-action="Index">Apoteka</a>
-                        </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Proizvod" asp-action="Index">Proizvodi</a>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ChackOuts" asp-action="Index">ChackOut</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Proizvodii" asp-action="Index">PrikazZaKorisnika</a>
-                        </li>
 
                         @* Kategorije Dropdown meni *@
                         <li class="nav-item dropdown">
@@ -81,11 +72,26 @@
                             </ul>
                         </li>
 
-                        @if (User.Identity.IsAuthenticated)
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Apoteka" asp-action="InformacijeOApoteci">O nama</a>
+                        </li>
+
+                        <!-- Da baze samo administator moze vidjeti-->
+                        @if (User.IsInRole("Administrator"))
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Korpa" asp-action="Index">Korpa</a>
                             </li>
+
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Apoteka" asp-action="Index">Apoteka</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Proizvod" asp-action="Index">Proizvodi</a>
+                            </li>
+
                         }
                     </ul>
 
