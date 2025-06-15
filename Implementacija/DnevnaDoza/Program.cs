@@ -2,6 +2,8 @@
 using DnevnaDoza.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Identity.UI.Services; // Dodato
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,8 +15,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
-// Register Email Service with Scoped lifetime
-builder.Services.AddScoped<EmailServis>();
+// Registracija EmailServis kao IEmailSender
+builder.Services.AddScoped<IEmailSender, EmailServis>();
 
 // Configure Identity
 builder.Services.AddDefaultIdentity<IdentityUser>(options =>

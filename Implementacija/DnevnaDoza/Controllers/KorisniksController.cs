@@ -16,6 +16,8 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Security.Claims;
 using DnevnaDoza.Models; // Za LoginViewModel
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Identity;
 
 
 namespace DnevnaDoza.Controllers
@@ -25,9 +27,9 @@ namespace DnevnaDoza.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        private readonly EmailServis _emailServis;
+        private readonly IEmailSender _emailServis;
 
-        public KorisniksController(ApplicationDbContext context, EmailServis emailServis)
+        public KorisniksController(ApplicationDbContext context, IEmailSender emailServis)
         {
             _context = context;
             _emailServis = emailServis;
