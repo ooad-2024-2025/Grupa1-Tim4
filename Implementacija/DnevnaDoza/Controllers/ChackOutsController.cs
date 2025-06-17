@@ -1,23 +1,27 @@
 ﻿using DnevnaDoza.Data;
 using DnevnaDoza.Models;
+using DnevnaDoza.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Identity;
 
 namespace DnevnaDoza.Controllers
 {
     public class ChackOutsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IEmailSender _emailServis;
 
-        public ChackOutsController(ApplicationDbContext context)
+        public ChackOutsController(ApplicationDbContext context, IEmailSender emailServis)
         {
             _context = context;
+            _emailServis = emailServis;
         }
-
         private string GetKorisnikId()
         {
             return User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -138,7 +142,7 @@ namespace DnevnaDoza.Controllers
 
             // Pronađi korisnika u bazi
             var korisnik = await _context.Korisnik
-                .FirstOrDefaultAsync(k => k.KorisnickoIme == korisnikGuid); // Koristi stvarnu kolonu koja čuva GUID
+                .FirstOrDefaultAsync(k => k.KorisnickoIme == korisnikGuid);
 
             if (korisnik == null)
             {
@@ -151,7 +155,7 @@ namespace DnevnaDoza.Controllers
             // Dohvatanje stavki iz korpe
             var stavke = await _context.ChackOut
                 .Include(c => c.Proizvod)
-                .Where(c => c.KorisnikId == korisnikGuid) // Koristi GUID za pretragu
+                .Where(c => c.KorisnikId == korisnikGuid)
                 .ToListAsync();
 
             if (stavke == null || !stavke.Any())
@@ -169,27 +173,57 @@ namespace DnevnaDoza.Controllers
                 BrojProizvoda = stavke.Count,
                 UkupnaCijena = ukupnaCijena,
                 DatumNarudzbe = DateTime.Now,
-                IDKorisnika = korisnikId, // Koristi int ID
+                IDKorisnika = korisnikId,
                 JeObradjenaNarudzba = false,
 
                 // Dodavanje korisničkih podataka
                // Ime = Ime,
-                //Prezime = Prezime,
-                //BrojTelefona = BrojTelefona,
-                //Grad = Grad,
-              //  Adresa = Adresa,
+               // Prezime = Prezime,
+               // BrojTelefona = BrojTelefona,
+               // Grad = Grad,
+               // Adresa = Adresa,
               //  PostanskiBroj = PostanskiBroj,
-               // BrojKartice = BrojKartice,
-               // CVC = CVC,
-               // DatumIstekaKartice = DatumIstekaKartice
+              //  BrojKartice = BrojKartice,
+              //  CVC = CVC,
+              //  DatumIstekaKartice = DatumIstekaKartice
             };
 
             // Dodavanje narudžbe u bazu
             _context.NarudzbaProizvoda.Add(narudzba);
             await _context.SaveChangesAsync();
 
-            TempData["Message"] = "Narudžba je uspešno završena!";
+            // Generisanje sadržaja računa za e-mail
+            var emailBody = "<h1>Vaš račun za narudžbu</h1>";
+            emailBody += "<p>Poštovani " + Ime + " " + Prezime + ",</p>";
+            emailBody += "<p>Hvala vam što ste izvršili kupovinu. Vaša narudžba sadrži sljedeće stavke:</p>";
+            emailBody += "<ul>";
+
+            foreach (var stavka in stavke)
+            {
+                emailBody += "<li>" + stavka.Proizvod.Naziv + " x" + stavka.Kolicina +
+                             " - " + stavka.Cijena.ToString("C") + "</li>";
+            }
+
+            emailBody += "</ul>";
+            emailBody += "<p>Ukupan iznos: " + ukupnaCijena.ToString("C") + "</p>";
+            emailBody += "<p>Adresa za dostavu: " + Adresa + ", " + Grad + "</p>";
+            emailBody += "<p>Hvala vam na povjerenju!</p>";
+
+            // Slanje e-maila korisniku
+            try
+            {
+                await _emailServis.SendEmailAsync(korisnik.EMail, "Vaš račun za narudžbu", emailBody);
+                TempData["Message"] = "Narudžba je uspješno završena! Račun je poslan na vaš e-mail.";
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = "Narudžba je završena, ali slanje e-maila nije uspjelo. " + ex.Message;
+            }
+
             return RedirectToAction("Index");
+        }
+
+
         }
     }
 }
