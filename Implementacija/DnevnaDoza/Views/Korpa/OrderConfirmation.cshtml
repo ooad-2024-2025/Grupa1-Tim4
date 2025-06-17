@@ -1,0 +1,9 @@
+﻿@page
+@model DnevnaDoza.Views.Korpa.OrderConfirmationModel
+@{
+    ViewData["Title"] = "Narudžba Potvrđena";
+}
+
+<h2>Narudžba Potvrđena</h2>
+<p>@TempData["Message"]</p>
+<a href="@Url.Action("Index", "Home")" class="btn btn-primary">Povratak na Početnu</a>

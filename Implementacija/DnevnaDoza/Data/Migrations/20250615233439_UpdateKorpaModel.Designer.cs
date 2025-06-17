@@ -4,6 +4,7 @@ using DnevnaDoza.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DnevnaDoza.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250615233439_UpdateKorpaModel")]
+    partial class UpdateKorpaModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -118,8 +121,11 @@ namespace DnevnaDoza.Data.Migrations
 
             modelBuilder.Entity("DnevnaDoza.Models.Korisnik", b =>
                 {
-                    b.Property<string>("IDKorisnik")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("IDKorisnik")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IDKorisnik"));
 
                     b.Property<string>("Adresa")
                         .IsRequired()
@@ -200,27 +206,14 @@ namespace DnevnaDoza.Data.Migrations
                     b.Property<int>("BrojProizvoda")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("Cijena")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("IDKorisnik")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("IDKorisnik")
+                        .HasColumnType("int");
 
                     b.Property<int>("IDNarudzbe")
                         .HasColumnType("int");
 
-                    b.Property<int>("Kolicina")
-                        .HasColumnType("int");
-
-                    b.Property<int>("KorisnikId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("PotvrdjenaNarudzba")
                         .HasColumnType("bit");
-
-                    b.Property<int>("ProizvodId")
-                        .HasColumnType("int");
 
                     b.Property<bool>("StanjeKorpe")
                         .HasColumnType("bit");
@@ -229,10 +222,6 @@ namespace DnevnaDoza.Data.Migrations
                         .HasColumnType("real");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("IDKorisnik");
-
-                    b.HasIndex("ProizvodId");
 
                     b.ToTable("Korpa", (string)null);
                 });
@@ -251,9 +240,8 @@ namespace DnevnaDoza.Data.Migrations
                     b.Property<DateTime>("DatumNarudzbe")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("IDKorisnika")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("IDKorisnika")
+                        .HasColumnType("int");
 
                     b.Property<int>("IDObradaNarudzbe")
                         .HasColumnType("int");
@@ -333,9 +321,6 @@ namespace DnevnaDoza.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IDStavkeNarudzbe"));
 
-                    b.Property<decimal>("Cijena")
-                        .HasColumnType("decimal(18,2)");
-
                     b.Property<float>("CijenaProizvoda")
                         .HasColumnType("real");
 
@@ -343,9 +328,6 @@ namespace DnevnaDoza.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("IDNarudzba")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IDNarudzbe")
                         .HasColumnType("int");
 
                     b.Property<int>("IDProizvoda")
@@ -361,12 +343,6 @@ namespace DnevnaDoza.Data.Migrations
                     b.Property<string>("Opis")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ProizvodId")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("Ukupno")
-                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("IDStavkeNarudzbe");
 
@@ -582,25 +558,6 @@ namespace DnevnaDoza.Data.Migrations
                         .HasForeignKey("ProizvodId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Proizvod");
-                });
-
-            modelBuilder.Entity("DnevnaDoza.Models.Korpa", b =>
-                {
-                    b.HasOne("DnevnaDoza.Models.Korisnik", "Korisnik")
-                        .WithMany()
-                        .HasForeignKey("IDKorisnik")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DnevnaDoza.Models.Proizvod", "Proizvod")
-                        .WithMany()
-                        .HasForeignKey("ProizvodId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Korisnik");
 
                     b.Navigation("Proizvod");
                 });

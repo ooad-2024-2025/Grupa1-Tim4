@@ -26,5 +26,6 @@ namespace DnevnaDoza.Models
         // 🔽 Dodano: veza s korisnikom
         [Required]
         public string KorisnikId { get; set; }
+
     }
 }

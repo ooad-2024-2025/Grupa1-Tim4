@@ -6,7 +6,7 @@ namespace DnevnaDoza.Models
     public class Korisnik
     {
         [Key]
-        public int IDKorisnik { get; set; }
+        public string IDKorisnik { get; set; }
 
         public string Ime { get; set; }
         public string Prezime { get; set; }

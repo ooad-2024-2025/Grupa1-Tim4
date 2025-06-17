@@ -1,70 +1,58 @@
 ﻿@model IEnumerable<DnevnaDoza.Models.Korpa>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Vaša Korpa";
 }
 
-<h1>Korpa</h1>
+<h1>Vaša Korpa</h1>
 
-<p>
-    <a asp-action="Create">Kreiraj novu korpu</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.StanjeKorpe)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BrojProizvoda)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PotvrdjenaNarudzba)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UkupanIznos)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IDKorisnik)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IDNarudzbe)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.StanjeKorpe)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BrojProizvoda)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PotvrdjenaNarudzba)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UkupanIznos)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IDKorisnik)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IDNarudzbe)
-            </td>
-                <td>
-                    @if (User.IsInRole("Administrator"))
-                    {
-                        <a asp-action="Edit" asp-route-id="@item.ID">Uredi</a>
-                        <nobr>|</nobr>
-                        <a asp-action="Delete" asp-route-id="@item.ID">Izbrisi</a>
-                        <nobr>|</nobr>
-                    }
-                    <a asp-action="Details" asp-route-id="@item.ID">Detalji</a>
-                </td>
-        </tr>
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Proizvod</th>
+                <th>Cijena (KM)</th>
+                <th>Količina</th>
+                <th>Ukupno (KM)</th>
+                <th>Akcije</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Proizvod.Naziv</td>
+                    <td>@item.Cijena.ToString("0.00")</td>
+                    <td>@item.Kolicina</td>
+                    <td>@(item.Cijena * item.Kolicina).ToString("0.00")</td>
+                    <td>
+                        <form asp-action="RemoveItem" method="post">
+                            <input type="hidden" name="id" value="@item.ID" />
+                            <button type="submit" class="btn btn-danger">Ukloni</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h3>Ukupno: @Model.Sum(k => k.Cijena * k.Kolicina).ToString("0.00") KM</h3>
+
+    <!-- Ispravka: Forma za završetak narudžbe -->
+    <form asp-action="CompleteOrder" method="post">
+        <button type="submit" class="btn btn-success">Završi narudžbu</button>
+    </form>
 }
-    </tbody>
-</table>
+else
+{
+    <p>Vaša korpa je prazna.</p>
+}
+
+<!-- Prikazivanje poruka -->
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info mt-3">
+        @TempData["Message"]
+    </div>
+}

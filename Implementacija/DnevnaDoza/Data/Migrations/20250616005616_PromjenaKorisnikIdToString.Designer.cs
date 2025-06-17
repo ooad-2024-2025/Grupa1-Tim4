@@ -4,6 +4,7 @@ using DnevnaDoza.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DnevnaDoza.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250616005616_PromjenaKorisnikIdToString")]
+    partial class PromjenaKorisnikIdToString
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -118,8 +121,11 @@ namespace DnevnaDoza.Data.Migrations
 
             modelBuilder.Entity("DnevnaDoza.Models.Korisnik", b =>
                 {
-                    b.Property<string>("IDKorisnik")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("IDKorisnik")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IDKorisnik"));
 
                     b.Property<string>("Adresa")
                         .IsRequired()
@@ -203,9 +209,8 @@ namespace DnevnaDoza.Data.Migrations
                     b.Property<decimal>("Cijena")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("IDKorisnik")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("IDKorisnik")
+                        .HasColumnType("int");
 
                     b.Property<int>("IDNarudzbe")
                         .HasColumnType("int");
@@ -251,9 +256,8 @@ namespace DnevnaDoza.Data.Migrations
                     b.Property<DateTime>("DatumNarudzbe")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("IDKorisnika")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("IDKorisnika")
+                        .HasColumnType("int");
 
                     b.Property<int>("IDObradaNarudzbe")
                         .HasColumnType("int");
