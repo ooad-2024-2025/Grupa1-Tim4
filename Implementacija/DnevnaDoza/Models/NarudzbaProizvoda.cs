@@ -18,7 +18,7 @@ namespace DnevnaDoza.Models
         public DateTime DatumNarudzbe { get; set; }
 
         [ForeignKey("Korisnik")]
-        public string IDKorisnika { get; set; }
+        public int IDKorisnika { get; set; }
 
         [ForeignKey("ObradaNarudzbe")]
         public int IDObradaNarudzbe { get; set; }

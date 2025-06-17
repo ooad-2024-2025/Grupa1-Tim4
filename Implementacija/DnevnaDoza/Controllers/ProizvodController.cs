@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using DnevnaDoza.Data;
+using DnevnaDoza.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using DnevnaDoza.Data;
-using DnevnaDoza.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace DnevnaDoza.Controllers
 {
@@ -20,7 +21,8 @@ namespace DnevnaDoza.Controllers
         }
 
         // GET: Proizvod
-          public async Task<IActionResult> Index()
+        [Authorize(Roles = "Administrator")]
+        public async Task<IActionResult> Index()
           {
               try
               {

@@ -50,7 +50,7 @@ namespace DnevnaDoza.Controllers
             }
 
             var korisnik = await _context.Korisnik
-                .FirstOrDefaultAsync(m => m.IDKorisnik == id.ToString());
+                .FirstOrDefaultAsync(m => m.IDKorisnik == id);
             if (korisnik == null)
             {
                 return NotFound();
@@ -240,7 +240,7 @@ namespace DnevnaDoza.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("IDKorisnik,Ime,Prezime,KorisnickoIme,TipKorisnika,DatumZaposlenja,Lozinka,CVC,DatumIstekaKartice,BrojKartice,BrojTelefona,MjestoStanovanja,PostanskiBroj,Adresa,EMail,IDApoteke")] Korisnik korisnik)
         {
-            if (id.ToString() != korisnik.IDKorisnik)
+            if (id != korisnik.IDKorisnik)
             {
                 return NotFound();
             }
@@ -277,7 +277,7 @@ namespace DnevnaDoza.Controllers
             }
 
             var korisnik = await _context.Korisnik
-                .FirstOrDefaultAsync(m => m.IDKorisnik == id.ToString());
+                .FirstOrDefaultAsync(m => m.IDKorisnik == id);
             if (korisnik == null)
             {
                 return NotFound();
@@ -301,9 +301,9 @@ namespace DnevnaDoza.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool KorisnikExists(string id)
+        private bool KorisnikExists(int id)
         {
-            return _context.Korisnik.Any(e => e.IDKorisnik == id.ToString());
+            return _context.Korisnik.Any(e => e.IDKorisnik == id);
         }
     }
 }

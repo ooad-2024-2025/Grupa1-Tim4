@@ -24,10 +24,6 @@ namespace DnevnaDoza.Models
         public float CijenaProizvoda { get; set; }
 
         public string Opis { get; set; }
-        public int IDNarudzbe { get; internal set; }
-        public int ProizvodId { get; internal set; }
-        public decimal Ukupno { get; internal set; }
-        public decimal Cijena { get; internal set; }
 
         // Navigacijska svojstva
         // public Proizvod Proizvod { get; set; }

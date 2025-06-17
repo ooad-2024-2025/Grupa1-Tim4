@@ -1,5 +1,6 @@
 ﻿using DnevnaDoza.Data;
 using DnevnaDoza.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace DnevnaDoza.Controllers
         }
 
         // GET: /ChackOuts
+     
         public async Task<IActionResult> Index()
         {
             var korisnikId = GetKorisnikId();
@@ -35,6 +37,7 @@ namespace DnevnaDoza.Controllers
         }
 
         // POST: /ChackOuts/Dodaj
+
         [HttpPost]
         public async Task<IActionResult> Dodaj(int proizvodId)
         {
@@ -68,6 +71,7 @@ namespace DnevnaDoza.Controllers
         }
 
         // POST: /ChackOuts/Izbrisi
+
         [HttpPost]
         public async Task<IActionResult> Izbrisi(int id)
         {

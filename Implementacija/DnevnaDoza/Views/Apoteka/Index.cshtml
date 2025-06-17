@@ -6,9 +6,13 @@
 
 <h1>Apoteka</h1>
 
+ @if (User.IsInRole("Administrator")){ 
 <p>
     <a asp-action="Create">Dodaj novu lokaciju</a>
 </p>
+ }
+
+
 <table class="table">
     <thead>
         <tr>

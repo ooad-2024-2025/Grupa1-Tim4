@@ -13,6 +13,8 @@ namespace DnevnaDoza.Models
         public int ProizvodId { get; set; }
 
         [ForeignKey("ProizvodId")]
+        [Required(ErrorMessage = "Naziv je obavezan.")]
+        [RegularExpression(@"^[A-Z][a-zA-ZčćžšđČĆŽŠĐ]*$", ErrorMessage = "Naziv mora početi velikim slovom i sadržavati samo slova.")]
         public Proizvod Proizvod { get; set; }
 
         public string Naziv { get; set; }

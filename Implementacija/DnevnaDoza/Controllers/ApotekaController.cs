@@ -27,7 +27,7 @@ namespace DnevnaDoza.Controllers
         
         
 
-        [Authorize(Roles = "Administrator, Korisnik")]
+        [Authorize(Roles = "Administrator")]
         // GET: Apotekas
         public async Task<IActionResult> Index()
         {

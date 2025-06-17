@@ -28,6 +28,7 @@ namespace DnevnaDoza.Controllers
         }
 
         // GET: NarudzbaProizvodas
+        [Authorize(Roles = "Administrator")]
         /*public async Task<IActionResult> Index()
         {
             return View(await _context.NarudzbaProizvoda.ToListAsync());
@@ -47,6 +48,8 @@ namespace DnevnaDoza.Controllers
         }
 
         // GET: NarudzbaProizvodas/Details/5
+        [Authorize(Roles = "Administrator")]
+
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -65,6 +68,7 @@ namespace DnevnaDoza.Controllers
         }
 
         // GET: NarudzbaProizvodas/Create
+        [Authorize(Roles = "Administrator")]
         public IActionResult Create()
         {
             return View();
@@ -87,6 +91,7 @@ namespace DnevnaDoza.Controllers
         }
 
         // GET: NarudzbaProizvodas/Edit/5
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -103,6 +108,7 @@ namespace DnevnaDoza.Controllers
         }
 
         // POST: NarudzbaProizvodas/Edit/5
+        [Authorize(Roles = "Administrator")]
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -138,6 +144,7 @@ namespace DnevnaDoza.Controllers
         }
 
         // GET: NarudzbaProizvodas/Delete/5
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -156,6 +163,7 @@ namespace DnevnaDoza.Controllers
         }
 
         // POST: NarudzbaProizvodas/Delete/5
+        [Authorize(Roles = "Administrator")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

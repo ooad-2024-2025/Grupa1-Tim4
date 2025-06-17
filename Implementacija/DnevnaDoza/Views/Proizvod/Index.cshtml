@@ -9,9 +9,15 @@ je u pitanju kolekcija podataka tipa Predmet. -->
 
 <h1>Baza proizvoda</h1>
 
-<p>
-    <a asp-action="Create">Dodaj Proizvod</a>
-</p>
+
+@if (User.IsInRole("Administrator"))
+{
+    <p>
+        <a asp-action="Create">Dodaj Proizvod</a>
+    </p>
+}
+
+
 <table class="table">
     <thead>
         <tr>
