@@ -39,6 +39,68 @@
 <div class="text-center mt-4">
     <h4>Ukupno za platiti: @ukupno.ToString("0.00") KM</h4>
     <form asp-action="CompleteOrder" asp-controller="Korpa" method="post" class="d-inline-block mt-2">
-        <button type="submit" class="btn btn-success btn-lg">Završi narudžbu</button>
+    <!--    <button type="submit" class="btn btn-success btn-lg">Završi narudžbu</button> -->
     </form>
 </div>
+
+
+<!-- Modal novododano by Zer-->
+<div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="checkoutModalLabel">Završetak narudžbe</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zatvori"></button>
+            </div>
+            <form id="checkoutForm" method="post" asp-action="CompleteOrder">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="ime" class="form-label">Ime</label>
+                        <input type="text" class="form-control" id="ime" name="Ime" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="prezime" class="form-label">Prezime</label>
+                        <input type="text" class="form-control" id="prezime" name="Prezime" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefon" class="form-label">Broj telefona</label>
+                        <input type="text" class="form-control" id="telefon" name="BrojTelefona" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="grad" class="form-label">Grad</label>
+                        <input type="text" class="form-control" id="grad" name="Grad" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="adresa" class="form-label">Adresa</label>
+                        <input type="text" class="form-control" id="adresa" name="Adresa" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="postanskiBroj" class="form-label">Poštanski broj</label>
+                        <input type="text" class="form-control" id="postanskiBroj" name="PostanskiBroj" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="brojKartice" class="form-label">Broj kartice</label>
+                        <input type="text" class="form-control" id="brojKartice" name="BrojKartice" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="cvc" class="form-label">CVC</label>
+                        <input type="text" class="form-control" id="cvc" name="CVC" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="datumIsteka" class="form-label">Datum isteka kartice</label>
+                        <input type="month" class="form-control" id="datumIsteka" name="DatumIstekaKartice" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+                    <button type="submit" class="btn btn-primary">Završi narudžbu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#checkoutModal">
+    Završi narudžbu
+</button>

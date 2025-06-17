@@ -1,0 +1,57 @@
+﻿<!-- Views/ChackOuts/_ZavrsiNarudzbu.cshtml -->
+@model DnevnaDoza.Models.OrderViewModel
+
+<form asp-action="ZavrsiNarudzbu" method="post">
+    <div class="form-group">
+        <label asp-for="Ime"></label>
+        <input asp-for="Ime" class="form-control" />
+        <span asp-validation-for="Ime" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Prezime"></label>
+        <input asp-for="Prezime" class="form-control" />
+        <span asp-validation-for="Prezime" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="BrojTelefona"></label>
+        <input asp-for="BrojTelefona" class="form-control" />
+        <span asp-validation-for="BrojTelefona" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Grad"></label>
+        <input asp-for="Grad" class="form-control" />
+        <span asp-validation-for="Grad" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Adresa"></label>
+        <input asp-for="Adresa" class="form-control" />
+        <span asp-validation-for="Adresa" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PostanskiBroj"></label>
+        <input asp-for="PostanskiBroj" class="form-control" />
+        <span asp-validation-for="PostanskiBroj" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="BrojKartice"></label>
+        <input asp-for="BrojKartice" class="form-control" />
+        <span asp-validation-for="BrojKartice" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CVC"></label>
+        <input asp-for="CVC" class="form-control" />
+        <span asp-validation-for="CVC" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DatumIstekaKartice"></label>
+        <input asp-for="DatumIstekaKartice" class="form-control" type="date" />
+        <span asp-validation-for="DatumIstekaKartice" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Potvrdi narudžbu</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

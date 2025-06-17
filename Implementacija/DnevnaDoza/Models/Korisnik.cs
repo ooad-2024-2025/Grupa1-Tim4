@@ -8,6 +8,9 @@ namespace DnevnaDoza.Models
         [Key]
         public int IDKorisnik { get; set; }
 
+      //  [Required]
+      //  public string Id { get; set; } // Čuva GUID korisnika
+
         [Required(ErrorMessage = "Ime je obavezno.")]
         [RegularExpression(@"^[A-Z][a-zA-ZčćžšđČĆŽŠĐ]*$", ErrorMessage = "Ime mora početi velikim slovom i sadržavati samo slova.")]
         public string Ime { get; set; }

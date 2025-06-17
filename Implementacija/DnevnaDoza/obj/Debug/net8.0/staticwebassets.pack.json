@@ -17,6 +17,22 @@
       "PackagePath": "staticwebassets\\images\\Alora.png"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\ooad-2024-2025\\Grupa1-Tim4\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Antimetil.png",
+      "PackagePath": "staticwebassets\\images\\Antimetil.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ooad-2024-2025\\Grupa1-Tim4\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Babytol.png",
+      "PackagePath": "staticwebassets\\images\\Babytol.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ooad-2024-2025\\Grupa1-Tim4\\Implementacija\\DnevnaDoza\\wwwroot\\images\\BiVits.png",
+      "PackagePath": "staticwebassets\\images\\BiVits.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ooad-2024-2025\\Grupa1-Tim4\\Implementacija\\DnevnaDoza\\wwwroot\\images\\CardioVitamin.png",
+      "PackagePath": "staticwebassets\\images\\CardioVitamin.png"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\ooad-2024-2025\\Grupa1-Tim4\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Multivitamin.png",
       "PackagePath": "staticwebassets\\images\\Multivitamin.png"
     },
@@ -25,8 +41,16 @@
       "PackagePath": "staticwebassets\\images\\Neofen-gel.png"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\ooad-2024-2025\\Grupa1-Tim4\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Neofen.png",
+      "PackagePath": "staticwebassets\\images\\Neofen.png"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\ooad-2024-2025\\Grupa1-Tim4\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Nozici.png",
       "PackagePath": "staticwebassets\\images\\Nozici.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ooad-2024-2025\\Grupa1-Tim4\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Nož.png",
+      "PackagePath": "staticwebassets\\images\\Nož.png"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\ooad-2024-2025\\Grupa1-Tim4\\Implementacija\\DnevnaDoza\\wwwroot\\images\\Oral-B.png",

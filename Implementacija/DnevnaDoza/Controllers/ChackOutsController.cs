@@ -111,5 +111,85 @@ namespace DnevnaDoza.Controllers
 
             return RedirectToAction("Index");
         }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CompleteOrder(string Ime, string Prezime, string BrojTelefona, string Grad, string Adresa, string PostanskiBroj, string BrojKartice, string CVC, DateTime DatumIstekaKartice)
+        {
+            // Validacija podataka
+            if (string.IsNullOrWhiteSpace(Ime) || string.IsNullOrWhiteSpace(Prezime) ||
+                string.IsNullOrWhiteSpace(BrojTelefona) || string.IsNullOrWhiteSpace(Grad) ||
+                string.IsNullOrWhiteSpace(Adresa) || string.IsNullOrWhiteSpace(PostanskiBroj) ||
+                string.IsNullOrWhiteSpace(BrojKartice) || string.IsNullOrWhiteSpace(CVC) ||
+                DatumIstekaKartice == default(DateTime))
+            {
+                TempData["Error"] = "Sva polja su obavezna.";
+                return RedirectToAction("Index");
+            }
+
+            // Dohvatanje trenutnog korisničkog GUID-a
+            var korisnikGuid = GetKorisnikId();
+            if (string.IsNullOrEmpty(korisnikGuid))
+            {
+                TempData["Error"] = "Korisnik nije prijavljen.";
+                return RedirectToAction("Index");
+            }
+
+            // Pronađi korisnika u bazi
+            var korisnik = await _context.Korisnik
+                .FirstOrDefaultAsync(k => k.KorisnickoIme == korisnikGuid); // Koristi stvarnu kolonu koja čuva GUID
+
+            if (korisnik == null)
+            {
+                TempData["Error"] = "Korisnik nije pronađen.";
+                return RedirectToAction("Index");
+            }
+
+            int korisnikId = korisnik.IDKorisnik;
+
+            // Dohvatanje stavki iz korpe
+            var stavke = await _context.ChackOut
+                .Include(c => c.Proizvod)
+                .Where(c => c.KorisnikId == korisnikGuid) // Koristi GUID za pretragu
+                .ToListAsync();
+
+            if (stavke == null || !stavke.Any())
+            {
+                TempData["Error"] = "Vaša korpa je prazna.";
+                return RedirectToAction("Index");
+            }
+
+            // Izračunavanje ukupne cene
+            double ukupnaCijena = stavke.Sum(s => (double)s.Cijena * s.Kolicina);
+
+            // Kreiranje nove narudžbe
+            var narudzba = new NarudzbaProizvoda
+            {
+                BrojProizvoda = stavke.Count,
+                UkupnaCijena = ukupnaCijena,
+                DatumNarudzbe = DateTime.Now,
+                IDKorisnika = korisnikId, // Koristi int ID
+                JeObradjenaNarudzba = false,
+
+                // Dodavanje korisničkih podataka
+               // Ime = Ime,
+                //Prezime = Prezime,
+                //BrojTelefona = BrojTelefona,
+                //Grad = Grad,
+              //  Adresa = Adresa,
+              //  PostanskiBroj = PostanskiBroj,
+               // BrojKartice = BrojKartice,
+               // CVC = CVC,
+               // DatumIstekaKartice = DatumIstekaKartice
+            };
+
+            // Dodavanje narudžbe u bazu
+            _context.NarudzbaProizvoda.Add(narudzba);
+            await _context.SaveChangesAsync();
+
+            TempData["Message"] = "Narudžba je uspešno završena!";
+            return RedirectToAction("Index");
+        }
     }
 }
