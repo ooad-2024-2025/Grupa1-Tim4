@@ -8,6 +8,9 @@ using System;
 
 namespace DnevnaDoza.Services
 {
+
+
+
     public class EmailServis : IEmailSender
     {
         private readonly IConfiguration _configuration;
@@ -18,7 +21,17 @@ namespace DnevnaDoza.Services
             _configuration = configuration;
             _logger = logger;
         }
-
+        //Sumeja dodala konstuktro bez loggera 
+        public EmailServis(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+        //public Task SendEmailAsync(string email, string subject, string htmlMessage)
+       // {
+            // Implement the method logic here
+          //  return Task.CompletedTask;
+        //}
+        //ovdje zavrsava ta izmjena 
         public async Task SendEmailAsync(string toEmail, string subject, string body)
         {
             try
