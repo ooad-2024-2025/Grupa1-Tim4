@@ -3,85 +3,74 @@
 }
 
 <!-- Naslov dobrodošlice -->
-<h1 style="text-align: center; color: hotpink; margin-top: 30px; font-size: 36px;">Dobro Došli!</h1>
+<h1 style="text-align: center; color: #F08080; margin-top: 30px; font-size: 36px;">Dobro Došli!</h1>
 
 <!-- Podnaslov -->
 <p style="text-align: center; font-size: 18px; margin-top: 10px;">
     Uživajte u kupovini – velik asortiman proizvoda za vaše zdravlje i sreću.
 </p>
 
-<!-- Proizvodi -->
+<!-- Kategorije Proizvoda -->
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; max-width: 100%; overflow: hidden;">
 
-    <!-- Proizvod 1 -->
-    <div style="border: 1px solid #ccc; padding: 10px; text-align: center; overflow: hidden;">
-        <a href="/Proizvod/Details/1">
-            <img src="https://i.imgur.com/T2W4OgN.png" alt="Proizvod 1"
-                 style="width: 100%; height: auto; max-height: 200px; object-fit: contain;">
+    <!-- Samoliječenje -->
+    <div style="border: 1px solid #F08080; padding: 10px; text-align: center;border-radius: 15px;">
+        <a asp-controller="Prikaz" asp-action="Index" asp-route-kategorija="Samolijecenje"
+           style="text-decoration: none; font-weight: bold; color: inherit;">
+            <img src="https://impotencija.hr/wp-content/uploads/2019/03/lijekovi_za_impotenciju.jpg" alt="Samolijecenje"
+                 style="width: 100%; height: 200px; object-fit: cover;" />
+            <p style="font-size: 18px; margin-top: 10px;">Samoliječenje</p>
         </a>
-        <p>Alora</p>
-        <p>4.95 KM</p>
-        <p style="font-style: italic; color: gray;">Kategorija: Samolijecenje</p>
     </div>
 
-    <!-- Proizvod 2 -->
-    <div style="border: 1px solid #ccc; padding: 10px; text-align: center; overflow: hidden;">
-        <a href="/Proizvod/Details/5">
-            <img src="https://phabcart.imgix.net/cdn/scdn/images/uploads/m0459_web.jpg" alt="Proizvod 2"
-                 style="width: 100%; height: auto; max-height: 200px; object-fit: contain;">
+    <!-- Antibiotici -->
+    <div style="border: 1px solid #F08080; padding: 10px; text-align: center;border-radius: 15px;">
+        <a asp-controller="Prikaz" asp-action="Index" asp-route-kategorija="Antibiotici" style="text-decoration: none; font-weight: bold; color: inherit;">
+            <img src="https://mandispharmljekarne.hr/upload/publish/54/thumb/rezistencija_62de98b0b8f0b_1410xr.webp" alt="Antibiotici"
+                 style="width: 100%; height: 200px; object-fit: cover;" />
+            <p style="font-size: 18px; margin-top: 10px;">Antibiotici</p>
         </a>
-        <p>Paracetamol</p>
-        <p>2.80 KM</p>
-        <p style="font-style: italic; color: gray;">Kategorija: Antibiotici</p>
     </div>
 
-    <!-- Proizvod 3 -->
-    <div style="border: 1px solid #ccc; padding: 10px; text-align: center; overflow: hidden;">
-        <a href="/Proizvod/Details/6">
-            <img src="https://biopharm.ba/wp-content/uploads/2024/09/NEOFEN-PLUS-GEL.png" alt="Proizvod 3"
-                 style="width: 100%; height: auto; max-height: 200px; object-fit: contain;">
+    <!-- DermoKozmetika -->
+    <div style="border: 1px solid #F08080; padding: 10px; text-align: center;border-radius: 15px;">
+        <a asp-controller="Prikaz" asp-action="Index" asp-route-kategorija="DermoKozmetika" style="text-decoration: none; font-weight: bold; color: inherit;">
+            <img src="https://mojaljekarna.hr/img/cms/SUHAKOZA1%20(1).jpg" alt="DermoKozmetika"
+                 style="width: 100%; height: 200px; object-fit: cover;" />
+            <p style="font-size: 18px; margin-top: 10px;">DermoKozmetika</p>
         </a>
-        <p>Neofen-plus gel</p>
-        <p>10.80 KM</p>
-        <p style="font-style: italic; color: gray;">Kategorija: DermoKozmetika</p>
     </div>
 
-    <!-- Proizvod 4 -->
-    <div style="border: 1px solid #ccc; padding: 10px; text-align: center; overflow: hidden;">
-        <a href="/Proizvod/Details/4">
-            <img src="https://static.beautytocare.com/cdn-cgi/image/width=1440,height=1200,f=auto/media/catalog/product//o/r/oral-b-gum-enamel-pro-repair-original-toothpaste-75ml.jpg" alt="Proizvod 4"
-                 style="width: 100%; height: auto; max-height: 200px; object-fit: contain;">
+    <!-- OralnaHigijena -->
+    <div style="border: 1px solid #F08080; padding: 10px; text-align: center;border-radius: 15px;">
+        <a asp-controller="Prikaz" asp-action="Index" asp-route-kategorija="OralnaHigijena" style="text-decoration: none; font-weight: bold; color: inherit;">
+            <img src="https://stomatologijadrbehara.rs/wp-content/uploads/2014/08/zdravlje-zuba-naslovna-1536x864.jpeg" alt="Oralna Higijena"
+                 style="width: 100%; height: 200px; object-fit: cover;" />
+            <p style="font-size: 18px; margin-top: 10px;">Oralna Higijena</p>
         </a>
-        <p>Oral-B pasta za zube</p>
-        <p>15.50 KM</p>
-        <p style="font-style: italic; color: gray;">Kategorija: OralnaHigijena</p>
     </div>
 
-    <!-- Proizvod 5 -->
-    <div style="border: 1px solid #ccc; padding: 10px; text-align: center; overflow: hidden;">
-        <a href="/Proizvod/Details/2">
-            <img src="https://www.apotekameralpharm.ba/storage/ribel-nozic.jpg" alt="Proizvod 5"
-                 style="width: 100%; height: auto; max-height: 200px; object-fit: contain;">
+    <!-- MedicinskiUredjaji -->
+    <div style="border: 1px solid #F08080; padding: 10px; text-align: center;border-radius: 15px;">
+        <a asp-controller="Prikaz" asp-action="Index" asp-route-kategorija="MedicinskiUredjaji" style="text-decoration: none; font-weight: bold; color: inherit;">
+            <img src="https://afarm.ba/wp-content/uploads/2024/10/medicinska-oprema_baner_kat.jpg.webp" alt="Medicinski Uređaji"
+                 style="width: 100%; height: 200px; object-fit: cover;" />
+            <p style="font-size: 18px; margin-top: 10px;">Medicinski Uređaji</p>
         </a>
-        <p>Ribel nožići</p>
-        <p>35.00 KM</p>
-        <p style="font-style: italic; color: gray;">Kategorija: MedicinskiUredjaji</p>
     </div>
 
-    <!-- Proizvod 6 -->
-    <div style="border: 1px solid #ccc; padding: 10px; text-align: center; overflow: hidden;">
-        <a href="/Proizvod/Details/3">
-            <img src="https://internetapoteka.ba/image/cache/catalog/ARTIKLI/Centrum-Women-tablete-a30-500x500.jpg"
-                 alt="Proizvod 6" style="width: 100%; height: auto; max-height: 200px; object-fit: contain;">
+    <!-- PrehrambeniProizvodi -->
+    <div style="border: 1px solid #F08080 ; padding: 10px; text-align: center;border-radius: 15px;">
+        <a asp-controller="Prikaz" asp-action="Index" asp-route-kategorija="PrehrambeniProizvodi" style="text-decoration: none; font-weight: bold; color: inherit;">
+            <img src="https://www.nestle.hr/sites/g/files/pydnoa296/files/styles/webp_image/public/2022-02/Uravnote%C5%BEena%20prehrana.png.webp?itok=f7SST9gp"
+                 alt="Prehrambeni Proizvodi" style="width: 100%; height: 200px; object-fit: cover;" />
+            <p style="font-size: 18px; margin-top: 10px;">Prehrambeni Proizvodi</p>
         </a>
-        <p>Multivitamin Centrum</p>
-        <p>15.20 KM</p>
-        <p style="font-style: italic; color: gray;">Kategorija: PrehrambeniProizvodi</p>
     </div>
 
 </div>
 
 <!-- Zaključni tekst -->
 <p style="text-align: center; margin-top: 30px; font-size: 20px; font-weight: bold;">
-    i još mnogo toga izabrano od nas za vas
+    Istražite naše kategorije i pronađite idealne proizvode za sebe!
 </p>
